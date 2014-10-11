@@ -1,0 +1,9 @@
+name: SmartAdmin
+version: 0.1
+main: com.gmail.kukubaczek.SmartAdmin.Main
+
+commands:
+  smartadmin:
+    description: Otwiera panel zarzadzania serwerem.
+  kick:
+    description: Wyrzuca gracza z serwera.
