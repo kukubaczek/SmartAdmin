@@ -1,6 +1,7 @@
 package com.gmail.kukubaczek.SmartAdmin.events;
 
 import org.bukkit.Bukkit;
+import org.bukkit.World;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -24,6 +25,7 @@ public class OnInvClick implements Listener{
     			try{
     		    	ItemMeta clicked = event.getCurrentItem().getItemMeta();
 	    			if(clicked.hasDisplayName()){
+	    				World wrl = player.getWorld();
 	    				if(clicked.getDisplayName().equals("§cWyłącz chat")){
 	    					Main.setVar("chat", false);
 	    					Bukkit.broadcastMessage(Main.getTag("tag") + " §cChat został wyłączony!");
@@ -42,14 +44,15 @@ public class OnInvClick implements Listener{
 	    					Bukkit.broadcastMessage(Main.getTag("tag") + " §bChat został wyczyszczony!");
 	    					Bukkit.broadcast(Main.getTag("tag") + " §a" + player.getName() + " §fwyczyścił chat!", "SmartAdmin.*");
 	    				}else if(clicked.getDisplayName().equals("§eUstaw dzień")){
-	    					player.getWorld().setTime(1000L);
-	    					Bukkit.broadcast(Main.getTag("tag") + " §a" + player.getName() + " §fustawił czas na §adzień§f w świecie §a" + player.getWorld().getName() + "§f!", "SmartAdmin.*");
+	    					wrl.setTime(1000L);
+	    					Bukkit.broadcast(Main.getTag("tag") + " §a" + player.getName() + " §fustawił czas na §adzień§f w świecie §a" + wrl.getName() + "§f!", "SmartAdmin.*");
 	    				}else if(clicked.getDisplayName().equals("§7Ustaw noc")){
-	    					player.getWorld().setTime(14000L);
-	    					Bukkit.broadcast(Main.getTag("tag") + " §a" + player.getName() + " §fustawił czas na §anoc§f w świecie §a" + player.getWorld().getName() + "§f!", "SmartAdmin.*");
+	    					wrl.setTime(14000L);
+	    					Bukkit.broadcast(Main.getTag("tag") + " §a" + player.getName() + " §fustawił czas na §anoc§f w świecie §a" + wrl.getName() + "§f!", "SmartAdmin.*");
 	    				}else if(clicked.getDisplayName().equals("§bWyłącz deszcz")){
-	    					player.getWorld().setTime(14000L);
-	    					Bukkit.broadcast(Main.getTag("tag") + " §fDeszcz został §awyłączony §fprzez §a" + player.getName() + " §fw świecie §a" + player.getWorld().getName() + "§f!", "SmartAdmin.*");
+	    					wrl.setStorm(false);
+	    					wrl.setThundering(false);
+	    					Bukkit.broadcast(Main.getTag("tag") + " §fDeszcz został §awyłączony §fprzez §a" + player.getName() + " §fw świecie §a" + wrl.getName() + "§f!", "SmartAdmin.*");
 	    				}
 	    			}
     			}catch (NullPointerException ex) {}
