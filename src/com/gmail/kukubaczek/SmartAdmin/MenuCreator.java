@@ -43,9 +43,16 @@ public class MenuCreator {
     	Meta.setLore(Arrays.asList("§7Ustawia czas na 1000 ticków."));
         stack.setItemMeta(Meta);
         menu1.setItem(14, stack);
+        
     	stack = new ItemStack(Material.ENDER_PEARL, 1);
         Meta.setDisplayName("§7Ustaw noc"); 
     	Meta.setLore(Arrays.asList("§7Ustawia czas na 14000 ticków."));
+        stack.setItemMeta(Meta);
+        menu1.setItem(23, stack);
+        
+    	stack = new ItemStack(Material.STONE, 1);
+        Meta.setDisplayName("§bWyłącz deszcz"); 
+    	Meta.setLore(Arrays.asList("§7Wyłącza deszcz w świecie,", "§7w którym się znajdujesz!"));
         stack.setItemMeta(Meta);
         menu1.setItem(23, stack);
 	}

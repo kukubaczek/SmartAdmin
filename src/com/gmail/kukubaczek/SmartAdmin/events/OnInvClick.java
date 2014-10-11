@@ -47,6 +47,9 @@ public class OnInvClick implements Listener{
 	    				}else if(clicked.getDisplayName().equals("§7Ustaw noc")){
 	    					player.getWorld().setTime(14000L);
 	    					Bukkit.broadcast(Main.getTag("tag") + " §a" + player.getName() + " §fustawił czas na §anoc§f w świecie §a" + player.getWorld().getName() + "§f!", "SmartAdmin.*");
+	    				}else if(clicked.getDisplayName().equals("§bWyłącz deszcz")){
+	    					player.getWorld().setTime(14000L);
+	    					Bukkit.broadcast(Main.getTag("tag") + " §fDeszcz został §awyłączony §fprzez §a" + player.getName() + " §fw świecie §a" + player.getWorld().getName() + "§f!", "SmartAdmin.*");
 	    				}
 	    			}
     			}catch (NullPointerException ex) {}

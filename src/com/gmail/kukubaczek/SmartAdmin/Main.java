@@ -25,9 +25,11 @@ public class Main extends JavaPlugin{
     public static boolean chat = true;
     
     /*
+     * 
      * Autor: Kukubaczek
      * Zakaz kopiowania kodu i urozpowszechniania.
      * Plugin jest cały czas w trakcie tworzenia! Zmiany następują co kilka minut!
+     * 
      */
     
     @Override
