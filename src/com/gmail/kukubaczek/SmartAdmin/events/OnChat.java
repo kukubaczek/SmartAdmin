@@ -20,7 +20,7 @@ public class OnChat implements Listener {
     		}
     	}
     	if(e.getPlayer().isSneaking()){
-    		Bukkit.broadcast(Main.getTag("AC") + " §fGracz §a" + p.getName() + " §fnapisał wiadomość na §achacie§f, gdy §asię skradał§f!", "SmartAdmin.AntyCheat");
+    		Bukkit.broadcast(Main.getTag("AC") + " §fGracz §a" + p.getName() + " §fnapisał wiadomość na §achacie§f, gdy §asię skradał§f!", "SmartAdmin.AntyCheat");
     	}
     }
 }
