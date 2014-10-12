@@ -16,23 +16,24 @@ public class MenuCreator {
 	public static void reloadInv() {
 		menu1.clear();
 		
+		ItemStack stack = new ItemStack(Material.INK_SACK, 1);
+        ItemMeta Meta = stack.getItemMeta();
+        short dur;
         if(Main.getVar("chat") == true){
-        	ItemStack stack = new ItemStack(Material.INK_SACK, 1, (short) 10);
-            ItemMeta Meta = stack.getItemMeta();
+        	dur = (short) 10;
             Meta.setDisplayName("§cWyłącz chat");
         	Meta.setLore(Arrays.asList("§7Wyłącza chat.", "§7Aktualnie: §aWłączony!"));
-            stack.setItemMeta(Meta);
-            menu1.setItem(10, stack);
         }else{
-        	ItemStack stack = new ItemStack(Material.INK_SACK, 1, (short) 8);
-            ItemMeta Meta = stack.getItemMeta();
+            dur = (short) 8;
             Meta.setDisplayName("§aWłącz chat"); 
         	Meta.setLore(Arrays.asList("§7Włącza chat.", "§7Aktualnie: §cWyłączony!"));
-            stack.setItemMeta(Meta);
-            menu1.setItem(10, stack);
         }
-    	ItemStack stack = new ItemStack(Material.INK_SACK, 1, (short) 3);
-        ItemMeta Meta = stack.getItemMeta();
+        stack.setItemMeta(Meta);
+        stack.setDurability(dur);
+        menu1.setItem(10, stack);
+        
+    	stack = new ItemStack(Material.INK_SACK, 1, (short) 3);
+        Meta = stack.getItemMeta();
         Meta.setDisplayName("§bWyczyść chat"); 
     	Meta.setLore(Arrays.asList("§7Czyści chat."));
         stack.setItemMeta(Meta);
