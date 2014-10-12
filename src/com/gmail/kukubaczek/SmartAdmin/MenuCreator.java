@@ -52,13 +52,13 @@ public class MenuCreator {
         
     	stack = new ItemStack(Material.STONE, 1);
         Meta.setDisplayName("§bWyłącz deszcz"); 
-    	Meta.setLore(Arrays.asList("§7Wyłącza deszcz w świecie,", "§7w którym się znajdujesz!"));
+    	Meta.setLore(Arrays.asList("§7Wyłącza deszcz w świecie,", "§7w którym się znajdujesz!"));
         stack.setItemMeta(Meta);
         menu1.setItem(32, stack);
         
     	stack = new ItemStack(Material.STONE, 1);
         Meta.setDisplayName("§4Włącz deszcz"); 
-    	Meta.setLore(Arrays.asList("§7Włącza deszcz w świecie,", "§7w którym się znajdujesz!"));
+    	Meta.setLore(Arrays.asList("§7Włącza deszcz w świecie,", "§7w którym się znajdujesz!"));
         stack.setItemMeta(Meta);
         menu1.setItem(41, stack);
 	}

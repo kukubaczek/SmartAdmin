@@ -13,12 +13,14 @@ public class OnRightClick implements Listener{
 	@EventHandler
     public void onPlayerInteract(PlayerInteractEvent event) {
 		Player player = (Player) event.getPlayer();
-		if(event.getItem().hasItemMeta()){
-			if(event.getItem().getItemMeta().getDisplayName().equals("§bSmartAdmin")){
-				if(event.getAction() == Action.RIGHT_CLICK_AIR || event.getAction() == Action.RIGHT_CLICK_BLOCK ){
-					if(player.hasPermission("admintools.open") || player.isOp()){
-						MenuCreator.openInv(player);
-	            	}
+		if(event.getItem() != null){
+			if(event.getItem().hasItemMeta()){
+				if(event.getItem().getItemMeta().getDisplayName().equals("§bSmartAdmin")){
+					if(event.getAction() == Action.RIGHT_CLICK_AIR || event.getAction() == Action.RIGHT_CLICK_BLOCK ){
+						if(player.hasPermission("admintools.open") || player.isOp()){
+							MenuCreator.openInv(player);
+		            	}
+					}
 				}
 			}
 		}
