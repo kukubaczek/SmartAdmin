@@ -53,6 +53,10 @@ public class OnInvClick implements Listener{
 	    					wrl.setStorm(false);
 	    					wrl.setThundering(false);
 	    					Bukkit.broadcast(Main.getTag("tag") + " §fDeszcz został §awyłączony §fprzez §a" + player.getName() + " §fw świecie §a" + wrl.getName() + "§f!", "SmartAdmin.*");
+	    				}else if(clicked.getDisplayName().equals("§4Włącz deszcz")){
+	    					wrl.setStorm(true);
+	    					wrl.setThundering(true);
+	    					Bukkit.broadcast(Main.getTag("tag") + " §fDeszcz został §awłączony §fprzez §a" + player.getName() + " §fw świecie §a" + wrl.getName() + "§f!", "SmartAdmin.*");
 	    				}
 	    			}
     			}catch (NullPointerException ex) {}
