@@ -27,7 +27,7 @@ public class Main extends JavaPlugin{
     /*
      * 
      * Autor: Kukubaczek & JuniorJPDJ
-     * Zakaz kopiowania kodu i urozpowszechniania.
+     * Obowiązuje zakaz używania kodu bez wiedzy i zgody autorów.
      * Plugin jest cały czas w trakcie tworzenia! Zmiany następują co kilka minut!
      * 
      */
@@ -62,14 +62,12 @@ public class Main extends JavaPlugin{
         
     }
     
-    //Much eaisier then registering events in 10 diffirent methods
     public static void registerEvents(org.bukkit.plugin.Plugin plugin, Listener... listeners) {
         for (Listener listener : listeners) {
             Bukkit.getServer().getPluginManager().registerEvents(listener, plugin);
         }
     }
     
-    //To access the plugin variable from other classes
     public static Plugin getPlugin() {
         return plugin;
     }
@@ -109,8 +107,8 @@ public class Main extends JavaPlugin{
     	}else if (tag.equalsIgnoreCase("AC")){
     		return tag_AC;
     	}else{
-    		String errrror = ChatColor.DARK_RED + "ERROR!";
-    		return errrror;
+    		String err = ChatColor.DARK_RED + "ERROR!";
+    		return err;
     	}
     }
     

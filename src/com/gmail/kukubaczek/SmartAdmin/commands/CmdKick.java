@@ -9,7 +9,8 @@ import com.gmail.kukubaczek.SmartAdmin.Main;
 
 public class CmdKick implements CommandExecutor {
 
-	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
+	@SuppressWarnings("deprecation")
+  public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
 			if(!sender.hasPermission("SmartAdmin.kick")){
 				sender.sendMessage("Nie masz permisji! c:");
 				return true;
