@@ -11,10 +11,10 @@ import org.bukkit.inventory.meta.ItemMeta;
 
 public class MenuCreator {
 	
-	static Inventory menu1 = Bukkit.createInventory(null, 54, "§aS§fmart§bA§fdmin");
+	static Inventory menu = Bukkit.createInventory(null, 54, "§aS§fmart§bA§fdmin");
 
 	public static void reloadInv() {
-		menu1.clear();
+		menu.clear();
 		
 		//czat
 		ItemStack stack = new ItemStack(Material.INK_SACK, 1);
@@ -31,44 +31,64 @@ public class MenuCreator {
 	  }
 	  stack.setItemMeta(Meta);
 	  stack.setDurability(dur);
-	  menu1.setItem(10, stack);
+	  menu.setItem(10, stack);
     
 	  stack = new ItemStack(Material.INK_SACK, 1, (short) 3);
 	  Meta = stack.getItemMeta();
 	  Meta.setDisplayName("§bWyczyść chat"); 
 	  Meta.setLore(Arrays.asList("§7Czyści chat."));
 	  stack.setItemMeta(Meta);
-	  menu1.setItem(19, stack);
+	  menu.setItem(19, stack);
     
 	  //czas
 	  stack = new ItemStack(Material.DOUBLE_PLANT, 1);
+	  Meta = stack.getItemMeta();
 	  Meta.setDisplayName("§eUstaw dzień"); 
 	  Meta.setLore(Arrays.asList("§7Ustawia czas na 1000 ticków."));
 	  stack.setItemMeta(Meta);
-	  menu1.setItem(14, stack);
+	  menu.setItem(16, stack);
 
 	  stack = new ItemStack(Material.ENDER_PEARL, 1);
+	  Meta = stack.getItemMeta();
 	  Meta.setDisplayName("§7Ustaw noc"); 
 	  Meta.setLore(Arrays.asList("§7Ustawia czas na 14000 ticków."));
 	  stack.setItemMeta(Meta);
-	  menu1.setItem(23, stack);
+	  menu.setItem(25, stack);
 
 	  //deszcz
-	  stack = new ItemStack(Material.STONE, 1);
+	  stack = new ItemStack(Material.BUCKET, 1);
+	  Meta = stack.getItemMeta();
 	  Meta.setDisplayName("§bWyłącz deszcz"); 
 	  Meta.setLore(Arrays.asList("§7Wyłącza deszcz w świecie,", "§7w którym się znajdujesz!"));
 	  stack.setItemMeta(Meta);
-	  menu1.setItem(32, stack);
+	  menu.setItem(34, stack);
 
-	  stack = new ItemStack(Material.STONE, 1);
+	  stack = new ItemStack(Material.WATER_BUCKET, 1);
+	  Meta = stack.getItemMeta();
 	  Meta.setDisplayName("§4Włącz deszcz"); 
 	  Meta.setLore(Arrays.asList("§7Włącza deszcz w świecie,", "§7w którym się znajdujesz!"));
 	  stack.setItemMeta(Meta);
-	  menu1.setItem(41, stack);
+	  menu.setItem(43, stack);
+	  
+	  //kickall
+	  stack = new ItemStack(Material.DISPENSER, 1, (short) 3);
+	  Meta = stack.getItemMeta();
+	  Meta.setDisplayName("§bWyrzuć wszystkich graczy"); 
+	  Meta.setLore(Arrays.asList("§7Wyrzuca z serwera wszystkich graczy,", "§7oprócz ciebie i administratorów"));
+	  stack.setItemMeta(Meta);
+	  menu.setItem(28, stack);
+	  
+	  /*//gracze
+	  stack = new ItemStack(Material.SKULL_ITEM, 1, (short) 3);
+	  Meta = stack.getItemMeta();
+	  Meta.setDisplayName("§bZarządzaj graczami"); 
+	  Meta.setLore(Arrays.asList("§7Wyświetla menu z graczami do zarządzania.","§7np. kick, gm, fly"));
+	  stack.setItemMeta(Meta);
+	  menu.setItem(37, stack);*/
 	}
 	
 	public static void openInv(Player player){
 	  reloadInv();
-	  player.openInventory(menu1);
+	  player.openInventory(menu);
 	}
 }
