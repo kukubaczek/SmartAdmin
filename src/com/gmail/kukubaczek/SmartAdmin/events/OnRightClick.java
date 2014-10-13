@@ -6,14 +6,14 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
 import org.bukkit.event.player.PlayerInteractEvent;
 
-import com.gmail.kukubaczek.SmartAdmin.MenuCreator;
+import com.gmail.kukubaczek.SmartAdmin.MainMenuCreator;
 
 public class OnRightClick implements Listener{
   @EventHandler
   public void onPlayerInteract(PlayerInteractEvent event) {
     Player player = (Player) event.getPlayer();
     if((event.getItem() != null) && event.getItem().hasItemMeta() && (event.getItem().getItemMeta().getDisplayName() == "§bSmartAdmin") && ((event.getAction() == Action.RIGHT_CLICK_AIR) || (event.getAction() == Action.RIGHT_CLICK_BLOCK)) && player.hasPermission("smartadmin.open")){
-      MenuCreator.openInv(player);
+      MainMenuCreator.openInv(player);
     }
   }
 }

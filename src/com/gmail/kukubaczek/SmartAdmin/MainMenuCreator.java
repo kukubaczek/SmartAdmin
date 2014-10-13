@@ -9,7 +9,7 @@ import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
-public class MenuCreator {
+public class MainMenuCreator {
 	
 	static Inventory menu = Bukkit.createInventory(null, 54, "§aS§fmart§bA§fdmin");
 
@@ -78,13 +78,13 @@ public class MenuCreator {
 	  stack.setItemMeta(Meta);
 	  menu.setItem(28, stack);
 	  
-	  /*//gracze
+	  //gracze
 	  stack = new ItemStack(Material.SKULL_ITEM, 1, (short) 3);
 	  Meta = stack.getItemMeta();
 	  Meta.setDisplayName("§bZarządzaj graczami"); 
 	  Meta.setLore(Arrays.asList("§7Wyświetla menu z graczami do zarządzania.","§7np. kick, gm, fly"));
 	  stack.setItemMeta(Meta);
-	  menu.setItem(37, stack);*/
+	  menu.setItem(37, stack);
 	}
 	
 	public static void openInv(Player player){

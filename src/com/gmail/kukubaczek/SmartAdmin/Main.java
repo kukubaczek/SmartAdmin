@@ -10,8 +10,9 @@ import com.gmail.kukubaczek.SmartAdmin.commands.CmdKick;
 import com.gmail.kukubaczek.SmartAdmin.commands.CmdKickAll;
 import com.gmail.kukubaczek.SmartAdmin.commands.CmdSmartAdmin;
 import com.gmail.kukubaczek.SmartAdmin.events.OnChat;
-import com.gmail.kukubaczek.SmartAdmin.events.OnInvClick;
+import com.gmail.kukubaczek.SmartAdmin.events.MainMenuOnInvClick;
 import com.gmail.kukubaczek.SmartAdmin.events.OnRightClick;
+import com.gmail.kukubaczek.SmartAdmin.events.PlayersListOnInvClick;
 import com.gmail.kukubaczek.SmartAdmin.events.antycheat.OnInvOpen;
 
 
@@ -37,7 +38,8 @@ public class Main extends JavaPlugin{
   public void onEnable() {
     plugin = this;
     registerEvents(this, new OnChat());
-    registerEvents(this, new OnInvClick());
+    registerEvents(this, new MainMenuOnInvClick());
+    registerEvents(this, new PlayersListOnInvClick());
     registerEvents(this, new OnInvOpen());
     registerEvents(this, new OnRightClick());
 

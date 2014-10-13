@@ -11,7 +11,7 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
 import com.gmail.kukubaczek.SmartAdmin.Main;
-import com.gmail.kukubaczek.SmartAdmin.MenuCreator;
+import com.gmail.kukubaczek.SmartAdmin.MainMenuCreator;
 
 public class CmdSmartAdmin implements CommandExecutor {
 
@@ -29,7 +29,7 @@ public class CmdSmartAdmin implements CommandExecutor {
 					if(sender.hasPermission("SmartAdmin.*") || sender.hasPermission("SmartAdmin.Commands")){
 						if(args[0].equalsIgnoreCase("open")){
 							sender.sendMessage(Main.getTag("tag") + " §fMenu zostalo otworzone!");
-							MenuCreator.openInv((Player) sender);
+							MainMenuCreator.openInv((Player) sender);
 						}else if(args[0].equalsIgnoreCase("reload")){
 							sender.sendMessage(Main.getTag("tag") + " §fReloaduje config...");
 							Main.reloadCfg();

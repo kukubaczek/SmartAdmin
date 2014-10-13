@@ -17,7 +17,7 @@ public class KickAll {
       reasonMsg = "\n§ePowód:\n§f" + reason;
     }
     for (Player p : Bukkit.getServer().getOnlinePlayers()) {
-      if (!p.isOp() && !p.isWhitelisted() && (p.getName() != admin)) {
+      if (!p.isOp() && (p.getName() != admin)) {
         p.kickPlayer("§aWszyscy gracze zostali wyrzuceni!" + "\n§ePrzez: §f" + admin + reasonMsg);
       }
     }
