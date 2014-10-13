@@ -20,17 +20,23 @@ public class CmdKickAll implements CommandExecutor {
 			//Tutaj ndal możesz robić krótkie ify ;) Kod jest wtedy czytelnijszy i nie przypomina pijanego węza :D
 			
 			if(args.length == 0){
-				//Metoda od kickowania do menu
+				for (Player p : Bukkit.getServer().getOnlinePlayers()) {
+		        	if (!p.isOp() && !p.isWhitelisted()) {
+						String admin = sender.getName();
+						p.kickPlayer("§aWszyscy gracze zostali wyrzuceni!" + "\n§ePrzez: §f" + admin);
+						return true;
+		        	}
+		        }	
 				return true;
 			}else{
 				for (Player p : Bukkit.getServer().getOnlinePlayers()) {
 		        	if (!p.isOp() && !p.isWhitelisted()) {
 						String admin = sender.getName();
 						String reasonMsg = "";
-						for(int i = 1; i < args.length; i++){
+						for(int i = 0; i < args.length; i++){
 							reasonMsg += args[i] + " ";
 						}
-						Bukkit.getPlayerExact(args[0]).kickPlayer("§aWszyscy gracze zostali wyrzuceni!" + "\n§ePrzez: §f" + admin + "\n§ePowód:\n§f" + reasonMsg);
+						p.kickPlayer("§aWszyscy gracze zostali wyrzuceni!" + "\n§ePrzez: §f" + admin + "\n§ePowód:\n§f" + reasonMsg);
 						return true;
 		        	}
 		        }	
