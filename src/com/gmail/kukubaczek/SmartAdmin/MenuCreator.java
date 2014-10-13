@@ -16,57 +16,59 @@ public class MenuCreator {
 	public static void reloadInv() {
 		menu1.clear();
 		
+		//czat
 		ItemStack stack = new ItemStack(Material.INK_SACK, 1);
-        ItemMeta Meta = stack.getItemMeta();
-        short dur;
-        if(Main.getVar("chat") == true){
-        	dur = (short) 10;
-            Meta.setDisplayName("§cWyłącz chat");
-        	Meta.setLore(Arrays.asList("§7Wyłącza chat.", "§7Aktualnie: §aWłączony!"));
-        }else{
-            dur = (short) 8;
-            Meta.setDisplayName("§aWłącz chat"); 
-        	Meta.setLore(Arrays.asList("§7Włącza chat.", "§7Aktualnie: §cWyłączony!"));
-        }
-        stack.setItemMeta(Meta);
-        stack.setDurability(dur);
-        menu1.setItem(10, stack);
-        
-    	stack = new ItemStack(Material.INK_SACK, 1, (short) 3);
-        Meta = stack.getItemMeta();
-        Meta.setDisplayName("§bWyczyść chat"); 
-    	Meta.setLore(Arrays.asList("§7Czyści chat."));
-        stack.setItemMeta(Meta);
-        menu1.setItem(19, stack);
-        
-    	stack = new ItemStack(Material.DOUBLE_PLANT, 1);
-        Meta.setDisplayName("§eUstaw dzień"); 
-    	Meta.setLore(Arrays.asList("§7Ustawia czas na 1000 ticków."));
-        stack.setItemMeta(Meta);
-        menu1.setItem(14, stack);
-        
-    	stack = new ItemStack(Material.ENDER_PEARL, 1);
-        Meta.setDisplayName("§7Ustaw noc"); 
-    	Meta.setLore(Arrays.asList("§7Ustawia czas na 14000 ticków."));
-        stack.setItemMeta(Meta);
-        menu1.setItem(23, stack);
-        
-    	stack = new ItemStack(Material.STONE, 1);
-        Meta.setDisplayName("§bWyłącz deszcz"); 
-    	Meta.setLore(Arrays.asList("§7Wyłącza deszcz w świecie,", "§7w którym się znajdujesz!"));
-        stack.setItemMeta(Meta);
-        menu1.setItem(32, stack);
-        
-    	stack = new ItemStack(Material.STONE, 1);
-        Meta.setDisplayName("§4Włącz deszcz"); 
-    	Meta.setLore(Arrays.asList("§7Włącza deszcz w świecie,", "§7w którym się znajdujesz!"));
-        stack.setItemMeta(Meta);
-        menu1.setItem(41, stack);
+	  ItemMeta Meta = stack.getItemMeta();
+	  short dur;
+	  if(Main.getVar("chat") == true){
+	    dur = (short) 10;
+	    Meta.setDisplayName("§cWyłącz chat");
+	    Meta.setLore(Arrays.asList("§7Wyłącza chat.", "§7Aktualnie: §aWłączony!"));
+	  } else {
+	    dur = (short) 8;
+	    Meta.setDisplayName("§aWłącz chat"); 
+	    Meta.setLore(Arrays.asList("§7Włącza chat.", "§7Aktualnie: §cWyłączony!"));
+	  }
+	  stack.setItemMeta(Meta);
+	  stack.setDurability(dur);
+	  menu1.setItem(10, stack);
+    
+	  stack = new ItemStack(Material.INK_SACK, 1, (short) 3);
+	  Meta = stack.getItemMeta();
+	  Meta.setDisplayName("§bWyczyść chat"); 
+	  Meta.setLore(Arrays.asList("§7Czyści chat."));
+	  stack.setItemMeta(Meta);
+	  menu1.setItem(19, stack);
+    
+	  //czas
+	  stack = new ItemStack(Material.DOUBLE_PLANT, 1);
+	  Meta.setDisplayName("§eUstaw dzień"); 
+	  Meta.setLore(Arrays.asList("§7Ustawia czas na 1000 ticków."));
+	  stack.setItemMeta(Meta);
+	  menu1.setItem(14, stack);
+
+	  stack = new ItemStack(Material.ENDER_PEARL, 1);
+	  Meta.setDisplayName("§7Ustaw noc"); 
+	  Meta.setLore(Arrays.asList("§7Ustawia czas na 14000 ticków."));
+	  stack.setItemMeta(Meta);
+	  menu1.setItem(23, stack);
+
+	  //deszcz
+	  stack = new ItemStack(Material.STONE, 1);
+	  Meta.setDisplayName("§bWyłącz deszcz"); 
+	  Meta.setLore(Arrays.asList("§7Wyłącza deszcz w świecie,", "§7w którym się znajdujesz!"));
+	  stack.setItemMeta(Meta);
+	  menu1.setItem(32, stack);
+
+	  stack = new ItemStack(Material.STONE, 1);
+	  Meta.setDisplayName("§4Włącz deszcz"); 
+	  Meta.setLore(Arrays.asList("§7Włącza deszcz w świecie,", "§7w którym się znajdujesz!"));
+	  stack.setItemMeta(Meta);
+	  menu1.setItem(41, stack);
 	}
 	
 	public static void openInv(Player player){
-		reloadInv();
-        player.openInventory(menu1);
+	  reloadInv();
+	  player.openInventory(menu1);
 	}
-	
 }
