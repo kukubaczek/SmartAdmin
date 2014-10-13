@@ -18,12 +18,11 @@ public class OnInvClick implements Listener{
   public void onInventoryClick(InventoryClickEvent event) {
     Player player = (Player) event.getWhoClicked(); // The player that clicked the item
     Inventory inventory = event.getInventory(); // The inventory that was clicked in
-    if(inventory.getName().equals("§aS§fmart§bA§fdmin")){
+    if((inventory.getName() == "§aS§fmart§bA§fdmin") && (event.getCurrentItem() != null)){
       event.setCancelled(true);
       if(player.hasPermission("SmartAdmin.*")){
 
         ItemMeta clicked = event.getCurrentItem().getItemMeta();
-        if(clicked == null) return;
         if(clicked.hasDisplayName()){
           World wrl = player.getWorld();
           if(clicked.getDisplayName().equals("§cWyłącz chat")){
