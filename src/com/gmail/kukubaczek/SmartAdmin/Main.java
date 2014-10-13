@@ -42,6 +42,7 @@ public class Main extends JavaPlugin{
         
         getCommand("SmartAdmin").setExecutor(new CmdSmartAdmin());
         getCommand("Kick").setExecutor(new CmdKick());
+        getCommand("KickAll").setExecutor(new CmdKickAll());
         
         /*
          *  Rejestracja Configów

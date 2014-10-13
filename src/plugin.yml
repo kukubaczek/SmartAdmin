@@ -7,3 +7,5 @@ commands:
     description: Otwiera panel zarzadzania serwerem.
   kick:
     description: Wyrzuca gracza z serwera.
+  kickall:
+    description: Wyrzuca wszystkich graczy z serwera.
