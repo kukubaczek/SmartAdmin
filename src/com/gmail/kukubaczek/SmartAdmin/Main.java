@@ -26,7 +26,7 @@ public class Main extends JavaPlugin{
     
     /*
      * 
-     * Autor: Kukubaczek
+     * Autor: Kukubaczek & JuniorJPDJ
      * Zakaz kopiowania kodu i urozpowszechniania.
      * Plugin jest cały czas w trakcie tworzenia! Zmiany następują co kilka minut!
      * 
