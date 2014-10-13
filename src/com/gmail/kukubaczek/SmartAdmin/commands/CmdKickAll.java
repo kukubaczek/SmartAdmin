@@ -1,25 +1,26 @@
 package com.gmail.kukubaczek.SmartAdmin.commands;
 
-import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
-import org.bukkit.entity.Player;
-
-import com.gmail.kukubaczek.SmartAdmin.Main;
+import com.gmail.kukubaczek.SmartAdmin.functions.KickAll;
 
 public class CmdKickAll implements CommandExecutor {
 
-	@SuppressWarnings("deprecation")
-  public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
+	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
 			if(!sender.hasPermission("SmartAdmin.kickall")){
 				sender.sendMessage("Nie masz permisji! c:");
 				return true;
 			}
 			
-			//Tutaj ndal możesz robić krótkie ify ;) Kod jest wtedy czytelnijszy i nie przypomina pijanego węza :D
+			String reason = "";
+			for(int i = 0; i < args.length; i++){
+        reason += args[i] + " ";
+      }
 			
-			if(args.length == 0){
+			KickAll.kickall(sender.getName(), reason);
+			
+			/*if(args.length == 0){
 				for (Player p : Bukkit.getServer().getOnlinePlayers()) {
 		        	if (!p.isOp() && !p.isWhitelisted()) {
 						String admin = sender.getName();
@@ -40,8 +41,8 @@ public class CmdKickAll implements CommandExecutor {
 						return true;
 		        	}
 		        }	
-			}
-			return false;
+			}*/
+			return true;
 	}
 }
 
