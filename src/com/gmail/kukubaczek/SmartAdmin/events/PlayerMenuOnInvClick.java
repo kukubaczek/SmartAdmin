@@ -21,7 +21,6 @@ public class PlayerMenuOnInvClick implements Listener{
 		if((inventory.getName().startsWith("§aS§fmart§bAdmin: §e")) && (item != null)){
 			event.setCancelled(true);
 			String name = inventory.getName().substring(20);
-			Bukkit.broadcastMessage("Gracz: " + name);
 			Player gracz = Bukkit.getPlayerExact(name);
 			String itemname = item.getItemMeta().getDisplayName();
 			if(itemname == "§cWyrzuć z serwera"){
@@ -29,6 +28,7 @@ public class PlayerMenuOnInvClick implements Listener{
 				Bukkit.broadcastMessage(Main.getTag("tag") + " §fGracz §a" + name + "§f został wyrzucony z serwera przez §a" + player.getName() + "§f!");
 			}else if(itemname == "§aUlecz"){
 				gracz.setHealth(20);
+				gracz.setFoodLevel(20);
 				Bukkit.broadcastMessage(Main.getTag("tag") + " §fGracz §a" + name + "§f został uleczony przez §a" + player.getName() + "§f!");
 			}
 		}

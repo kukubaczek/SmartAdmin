@@ -20,11 +20,11 @@ public class PlayerMenuCreator {
 		 menu.setItem(16, stack);
 		 
 		 //heal
-		 ItemStack stack1 = new ItemStack (Material.APPLE, 1);
-		 ItemMeta meta1 = stack1.getItemMeta();
-		 meta1.setDisplayName("§aUlecz");
-		 stack1.setItemMeta(meta1);
-		 menu.setItem(10, stack1);
+		 stack = new ItemStack (Material.APPLE, 1);
+		 meta = stack.getItemMeta();
+		 meta.setDisplayName("§aUlecz");
+		 stack.setItemMeta(meta);
+		 menu.setItem(10, stack);
 		 
 		 admin.openInventory(menu);
 	 }
