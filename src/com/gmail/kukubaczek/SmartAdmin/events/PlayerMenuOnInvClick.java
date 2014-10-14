@@ -9,6 +9,7 @@ import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 
 import com.gmail.kukubaczek.SmartAdmin.Main;
+import com.gmail.kukubaczek.SmartAdmin.PlayerMenuCreator;
 
 public class PlayerMenuOnInvClick implements Listener{
 
@@ -30,6 +31,14 @@ public class PlayerMenuOnInvClick implements Listener{
 				gracz.setHealth(20);
 				gracz.setFoodLevel(20);
 				Bukkit.broadcastMessage(Main.getTag("tag") + " §fGracz §a" + name + "§f został uleczony przez §a" + player.getName() + "§f!");
+			}else if(itemname == "§aFly"){
+				gracz.setAllowFlight(false);
+				Bukkit.broadcast(Main.getTag("tag") + " §a" + player.getName() + " §fwyłączył latanie dla gracza§a " + name + "§f!", "SmartAdmin.*");
+				PlayerMenuCreator.reloadInv(player, gracz.getName());
+			}else if(itemname == "§cFly"){
+				gracz.setAllowFlight(true);
+				Bukkit.broadcast(Main.getTag("tag") + " §a" + player.getName() + " §fwłączył latanie dla gracza§a " + name + "§f!", "SmartAdmin.*");
+				PlayerMenuCreator.reloadInv(player, gracz.getName());
 			}
 		}
 	  }
