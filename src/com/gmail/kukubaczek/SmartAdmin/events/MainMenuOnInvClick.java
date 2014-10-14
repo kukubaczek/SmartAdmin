@@ -43,7 +43,7 @@ public class MainMenuOnInvClick implements Listener{
             MainMenuCreator.reloadInv();
             
           } else if(clicked.getDisplayName() == "§bWyczyść chat"){
-            for (int i = 0; i < 50; i++){
+            for (int i = 0; i < 100; i++){
               Bukkit.broadcastMessage(" ");
             }
             Bukkit.broadcastMessage(Main.getTag("tag") + " §bChat został wyczyszczony!");
@@ -72,7 +72,7 @@ public class MainMenuOnInvClick implements Listener{
             //kickall
           } else if(clicked.getDisplayName() == "§bWyrzuć wszystkich graczy"){
             KickAll.kickall(player.getName());
-            Bukkit.broadcast(Main.getTag("tag") + " §fWszyscy gracze zostali wyrzuceni przez §a " + player.getName() + "§f!", "SmartAdmin.*");
+            Bukkit.broadcast(Main.getTag("tag") + " §fWszyscy gracze zostali wyrzuceni przez §a" + player.getName() + "§f!", "SmartAdmin.*");
             
             //gracze
           } else if(clicked.getDisplayName() == "§bZarządzaj graczami"){
