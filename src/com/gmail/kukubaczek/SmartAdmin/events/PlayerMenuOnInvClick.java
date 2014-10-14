@@ -21,12 +21,16 @@ public class PlayerMenuOnInvClick implements Listener{
 		Inventory inventory = event.getInventory();
 		ItemStack item = event.getCurrentItem();
 		if((inventory.getName().startsWith("§aS§fmart§bAdmin: §e")) && (item != null)){
+			event.setCancelled(true);
 			String name = inventory.getName().replace("§aS§fmart§bAdmin: §e", "");
 			Bukkit.broadcastMessage("Gracz: " + name);
 			Player gracz = Bukkit.getPlayerExact(name);
 			String itemname = item.getItemMeta().getDisplayName();
-			if(itemname == "Kick"){
-				gracz.kickPlayer("test");
+			if(itemname == "§cKick"){
+				gracz.kickPlayer("§aZostałeś wyrzucony z serwera!" + "\n§ePrzez: §f" + player.getName());
+				Bukkit.broadcastMessage(Main.getTag("tag") + " §fGracz §a" + name + "§f został wyrzucony z serwera przez §a" + player.getName() + "§f!");
+			}else if(itemname == "§cKick"){
+				gracz.setHealth(20);
 			}
 		}
 	  }
