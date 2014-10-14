@@ -27,7 +27,7 @@ public class PlayerMenuOnInvClick implements Listener{
 			if(itemname == "§cWyrzuć z serwera"){
 				gracz.kickPlayer("§aZostałeś wyrzucony z serwera!" + "\n§ePrzez: §f" + player.getName());
 				Bukkit.broadcastMessage(Main.getTag("tag") + " §fGracz §a" + name + "§f został wyrzucony z serwera przez §a" + player.getName() + "§f!");
-			}else if(itemname == "§aHeal"){
+			}else if(itemname == "§aUlecz"){
 				gracz.setHealth(20);
 				Bukkit.broadcastMessage(Main.getTag("tag") + " §fGracz §a" + name + "§f został uleczony przez §a" + player.getName() + "§f!");
 			}
