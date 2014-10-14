@@ -17,8 +17,8 @@ public class PlayersListOnInvClick implements Listener{
 
   @EventHandler
   public void onInventoryClick(InventoryClickEvent event) {
-    Player player = (Player) event.getWhoClicked(); // The player that clicked the item
-    Inventory inventory = event.getInventory(); // The inventory that was clicked in
+    Player player = (Player) event.getWhoClicked();
+    Inventory inventory = event.getInventory();
     if((inventory.getName() == "§aS§fmart§bAdmin: §3Gracze") && (event.getCurrentItem() != null)){
       event.setCancelled(true);
       if(player.hasPermission("SmartAdmin.*")){

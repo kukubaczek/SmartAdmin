@@ -5,8 +5,6 @@ import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
 
 public class PlayerMenuCreator {
-
-		static Inventory menu = Bukkit.createInventory(null, 54, "§aS§fmart§bAdmin: §3Gracz: §e");
 	
 	 public static void reloadInv(Player player) {
 		 
