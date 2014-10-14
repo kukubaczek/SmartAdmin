@@ -15,14 +15,14 @@ public class PlayerMenuCreator {
 		 //kick
 		 ItemStack stack = new ItemStack (Material.APPLE, 1);
 		 ItemMeta meta = stack.getItemMeta();
-		 meta.setDisplayName("§cKick");
+		 meta.setDisplayName("§cWyrzuć z serwera");
 		 stack.setItemMeta(meta);
 		 menu.setItem(9, stack);
 		 
 		 //heal
 		 ItemStack stack1 = new ItemStack (Material.APPLE, 1);
 		 ItemMeta meta1 = stack1.getItemMeta();
-		 meta1.setDisplayName("§aHeal");
+		 meta1.setDisplayName("§aUlecz");
 		 stack1.setItemMeta(meta1);
 		 menu.setItem(1, stack1);
 		 
