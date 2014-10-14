@@ -1,5 +1,6 @@
 package com.gmail.kukubaczek.SmartAdmin.events;
 
+import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -8,6 +9,7 @@ import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.meta.ItemMeta;
 
 import com.gmail.kukubaczek.SmartAdmin.Main;
+import com.gmail.kukubaczek.SmartAdmin.PlayerMenuCreator;
 import com.gmail.kukubaczek.SmartAdmin.PlayersListCreator;
 
 
@@ -29,7 +31,8 @@ public class PlayersListOnInvClick implements Listener{
             player.closeInventory();
             PlayersListCreator.openInv(player, Integer.parseInt(name.substring(11)));
           } else {
-            player.sendMessage("Wybrales gracza o nicku " + name.substring(2));
+            player.sendMessage("Wybrales gracza o nicku " + name.substring(2)); //debug
+            PlayerMenuCreator.openInv(player, Bukkit.getPlayerExact(name.substring(2)));
           }
         }
       } else {
