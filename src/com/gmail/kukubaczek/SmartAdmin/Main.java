@@ -82,13 +82,13 @@ public class Main extends JavaPlugin{
     }
   }
   
-  public void reloadCfg(){
-    reloadConfig();
-    tag_tag = ChatColor.translateAlternateColorCodes('&', getConfig().getString("TAG"));
-    tag_error = ChatColor.translateAlternateColorCodes('&', getConfig().getString("TAG_ERROR"));
-    tag_AC = ChatColor.translateAlternateColorCodes('&', getConfig().getString("TAG_ANTYCHEAT"));
-    join_msg = ChatColor.translateAlternateColorCodes('&', getConfig().getString("JOIN_MESSAGE"));
-    leave_msg = ChatColor.translateAlternateColorCodes('&', getConfig().getString("LEAVE_MESSAGE"));
+  public static void reloadCfg(){
+    plugin.reloadConfig();
+    tag_tag = ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("TAG"));
+    tag_error = ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("TAG_ERROR"));
+    tag_AC = ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("TAG_ANTYCHEAT"));
+    join_msg = ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("JOIN_MESSAGE"));
+    leave_msg = ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("LEAVE_MESSAGE"));
   }
 
   public static String getTag(String tag){

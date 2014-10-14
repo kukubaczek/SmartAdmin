@@ -14,17 +14,15 @@ import com.gmail.kukubaczek.SmartAdmin.Main;
 import com.gmail.kukubaczek.SmartAdmin.MainMenuCreator;
 
 public class CmdSmartAdmin implements CommandExecutor {
-
-	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
+  
+  public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
 		if(cmd.getName().equalsIgnoreCase("smartadmin")){
-    Main Main1 = new Main();
 			if(sender instanceof Player){
 				if(args.length == 0){
-					sender.sendMessage(Main.getTag("tag") + " §fWersja pluginu: §a" + Main.getPlugin().getDescription().getVersion() + "§f! Autor: §aKukubaczek§f!");
+					sender.sendMessage(Main.getTag("tag") + " §fWersja pluginu: §a" + Main.getPlugin().getDescription().getVersion() + "§f! Autorzy: §aKukubaczek§f i §aJuniorJPDJ!");
 					if(sender.hasPermission("SmartAdmin.*")){
 						sender.sendMessage(Main.getTag("error") + " §fUzycie: /§aSmartAdmin §f(§aopen§f|§aget§f|§areload§f)");
 					}
-			//		sender.sendMessage(Main.getTag("error") + " Ta komenda jest przeznaczona tylko dla graczy!");
 					return true;
 				}else{
 					if(sender.hasPermission("SmartAdmin.*") || sender.hasPermission("SmartAdmin.Commands")){
@@ -33,7 +31,7 @@ public class CmdSmartAdmin implements CommandExecutor {
 							MainMenuCreator.openInv((Player) sender);
 						}else if(args[0].equalsIgnoreCase("reload")){
 							sender.sendMessage(Main.getTag("tag") + " §fReloaduje config...");
-							Main1.reloadCfg();
+							Main.reloadCfg();
 							sender.sendMessage(Main.getTag("tag") + " §fZreloadowalem config!");
 						}else if(args[0].equalsIgnoreCase("get")){
 							sender.sendMessage(Main.getTag("tag") + " §fDodaje do ekwipunku §aSmartAdmin§f!");
