@@ -6,6 +6,7 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.inventory.Inventory;
+import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
 import com.gmail.kukubaczek.SmartAdmin.Main;
@@ -18,10 +19,15 @@ public class PlayerMenuOnInvClick implements Listener{
 	  public void onInventoryClick(InventoryClickEvent event) {
 		Player player = (Player) event.getWhoClicked();
 		Inventory inventory = event.getInventory();
-		if((inventory.getName().startsWith("§aS§fmart§bAdmin: §e")) && (event.getCurrentItem() != null)){
+		ItemStack item = event.getCurrentItem();
+		if((inventory.getName().startsWith("§aS§fmart§bAdmin: §e")) && (item != null)){
 			String name = inventory.getName().replace("§aS§fmart§bAdmin: §e", "");
 			Bukkit.broadcastMessage("Gracz: " + name);
-			Bukkit.broadcastMessage("Item: " + event.getCurrentItem().toString());
+			Player gracz = Bukkit.getPlayerExact(name);
+			String itemname = item.getItemMeta().getDisplayName();
+			if(itemname == "Kick"){
+				gracz.kickPlayer("test");
+			}
 		}
 	  }
 }
