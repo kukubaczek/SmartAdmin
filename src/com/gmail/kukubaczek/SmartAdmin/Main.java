@@ -19,7 +19,7 @@ import com.gmail.kukubaczek.SmartAdmin.events.antycheat.OnInvOpen;
 
 public class Main extends JavaPlugin{
 
-  private static Plugin plugin;
+  private static Main plugin;
 
   public static String tag_error;
   public static String tag_tag;
@@ -38,16 +38,13 @@ public class Main extends JavaPlugin{
   @Override
   public void onEnable() {
     plugin = this;
-    registerEvents(this, new OnChat());
-    registerEvents(this, new MainMenuOnInvClick());
-    registerEvents(this, new PlayersListOnInvClick());
-    registerEvents(this, new PlayerMenuOnInvClick());
-    registerEvents(this, new OnInvOpen());
-    registerEvents(this, new OnRightClick());
+    registerEvents(this, new OnChat(), new MainMenuOnInvClick(), new PlayersListOnInvClick(), new PlayerMenuOnInvClick(), new OnInvOpen(), new OnRightClick());
     
-    getCommand("SmartAdmin").setExecutor(new CmdSmartAdmin());
+    getCommand("SmartAdmin").setExecutor(new CmdSmartAdmin()); //Czemu nie zrobicie rejestrowania komend bezpośrednio poprzez CommandMap? Nie musicie dodować ich wtedy do plugin.yml a i zarządzanie nimi jest dużo prostsze ;)
     getCommand("Kick").setExecutor(new CmdKick());
     getCommand("KickAll").setExecutor(new CmdKickAll());
+    
+    
 
     /*
      *  Rejestracja Configów
@@ -58,7 +55,7 @@ public class Main extends JavaPlugin{
 
 
 
-    tag_tag = Cfg.getConfig("config").getString("TAG");
+    tag_tag = Cfg.getConfig("config").getString("TAG"); //Config zrobiłbym inaczej, ale jako ze nie umiem tworzyć nowych plików to Wam nie pokaże :D
     tag_error = Cfg.getConfig("config").getString("TAG_ERROR");
     tag_AC = Cfg.getConfig("config").getString("TAG_ANTYCHEAT");
 
@@ -74,8 +71,8 @@ public class Main extends JavaPlugin{
     }
   }
 
-  public static Plugin getPlugin() {
-    return plugin;
+  public static Main getPlugin() {
+    return plugin; //zwraca swój obiekt pluginu, nie interfejs. Masz dostęp wtedy do własnych metod ;>
   }
 
   public static void setVar(String var, boolean set){
