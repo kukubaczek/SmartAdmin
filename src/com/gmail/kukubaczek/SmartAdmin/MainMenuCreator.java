@@ -8,6 +8,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
+import org.bukkit.inventory.meta.SkullMeta;
 
 public class MainMenuCreator {
 	
@@ -80,10 +81,11 @@ public class MainMenuCreator {
 	  
 	  //gracze
 	  stack = new ItemStack(Material.SKULL_ITEM, 1, (short) 3);
-	  Meta = stack.getItemMeta();
-	  Meta.setDisplayName("§bZarządzaj graczami"); 
-	  Meta.setLore(Arrays.asList("§7Wyświetla menu z graczami do zarządzania.","§7np. kick, gm, fly"));
-	  stack.setItemMeta(Meta);
+	  SkullMeta skullMeta = (SkullMeta) stack.getItemMeta();
+	  skullMeta.setDisplayName("§bZarządzaj graczami");
+	  skullMeta.setOwner("jakis_stiwek"); //zmieniłem to bo się bugowała główka na 1.8 :< kuku
+	  skullMeta.setLore(Arrays.asList("§7Wyświetla menu z graczami do zarządzania nimi.","§7np. kick, gm, fly"));
+	  stack.setItemMeta(skullMeta);
 	  menu.setItem(37, stack);
 	}
 	
