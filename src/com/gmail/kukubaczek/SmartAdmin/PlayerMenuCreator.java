@@ -9,9 +9,8 @@ import org.bukkit.inventory.meta.ItemMeta;
 
 public class PlayerMenuCreator {
 	
-	 public static void reloadInv(Player admin, Player player) {
-		 String name = player.getName();
-		 Inventory menu = Bukkit.createInventory(null, 54, "§aS§fmart§bAdmin: §e" + name);
+	 public static void reloadInv(Player admin, String player) {
+		 Inventory menu = Bukkit.createInventory(null, 54, "§aS§fmart§bAdmin: §e" + player);
 		 ItemStack stack = new ItemStack (Material.APPLE, 1);
 		 ItemMeta meta = stack.getItemMeta();
 		 meta.setDisplayName("Kick");

@@ -32,7 +32,7 @@ public class PlayersListOnInvClick implements Listener{
             PlayersListCreator.openInv(player, Integer.parseInt(name.substring(11)));
           } else {
             player.sendMessage("Wybrales gracza o nicku " + name.substring(2)); //debug
-            PlayerMenuCreator.reloadInv(player, Bukkit.getPlayerExact(name.substring(2)));
+            PlayerMenuCreator.reloadInv(player, name.substring(2));
           }
         }
       } else {
