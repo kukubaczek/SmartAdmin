@@ -40,13 +40,8 @@ public class Main extends JavaPlugin{
   @Override
   public void onEnable() {
     plugin = this;
-    registerEvents(this, new OnChat());
-    registerEvents(this, new MainMenuOnInvClick());
-    registerEvents(this, new PlayersListOnInvClick());
-    registerEvents(this, new PlayerMenuOnInvClick());
-    registerEvents(this, new OnInvOpen());
-    registerEvents(this, new OnRightClick());
-    registerEvents(this, new OnDamage());
+    
+    registerEvents(this, new OnChat(), new MainMenuOnInvClick(), new PlayersListOnInvClick(), new PlayerMenuOnInvClick(), new OnInvOpen(), new OnRightClick(), new OnDamage());
     
     getCommand("SmartAdmin").setExecutor(new CmdSmartAdmin());
     getCommand("Kick").setExecutor(new CmdKick());
