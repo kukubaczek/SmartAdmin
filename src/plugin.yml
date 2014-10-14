@@ -1,6 +1,9 @@
 name: SmartAdmin
 version: 0.1
 main: com.gmail.kukubaczek.SmartAdmin.Main
+description: "Wprowadza na Twój serwer autorskie Toolsy! Wystarczy wpisać /smartadmin open!"
+authors: [Kukubaczek, JuniorJPDJ]
+database: false
 
 commands:
   smartadmin:
@@ -9,3 +12,7 @@ commands:
     description: Wyrzuca gracza z serwera.
   kickall:
     description: Wyrzuca wszystkich graczy z serwera.
+    
+permissions:
+  SmartAdmin.*:
+    default: op
