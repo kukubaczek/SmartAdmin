@@ -8,6 +8,7 @@ database: false
 commands:
   smartadmin:
     description: Otwiera panel zarzadzania serwerem.
+    aliases: [sa, smartadm, sadmin]
   kick:
     description: Wyrzuca gracza z serwera.
   kickall:

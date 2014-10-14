@@ -16,7 +16,7 @@ import com.gmail.kukubaczek.SmartAdmin.MainMenuCreator;
 public class CmdSmartAdmin implements CommandExecutor {
 
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
-		if(label.equalsIgnoreCase("SmartAdmin")){
+		if(label.equalsIgnoreCase("SmartAdmin") || label.equalsIgnoreCase("sa") || label.equalsIgnoreCase("smartadm") || label.equalsIgnoreCase("sadmin")){
 			if(sender instanceof Player){
 				if(args.length == 0){
 					sender.sendMessage(Main.getTag("tag") + " §fWersja pluginu: §a" + Main.getPlugin().getDescription().getVersion() + "§f! Autor: §aKukubaczek§f!");
