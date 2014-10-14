@@ -12,6 +12,8 @@ commands:
     description: Wyrzuca gracza z serwera.
   kickall:
     description: Wyrzuca wszystkich graczy z serwera.
+  helpop:
+    description: Wysyla wiadomosc do administracji.
     
 permissions:
   SmartAdmin.*:
