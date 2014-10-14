@@ -12,11 +12,20 @@ public class PlayerMenuCreator {
 	 public static void reloadInv(Player admin, Player player) {
 		 String name = player.getName();
 		 Inventory menu = Bukkit.createInventory(null, 54, "§aS§fmart§bAdmin: §e" + name);
+		 
+		 //kick
 		 ItemStack stack = new ItemStack (Material.APPLE, 1);
 		 ItemMeta meta = stack.getItemMeta();
-		 meta.setDisplayName("Kick");
+		 meta.setDisplayName("§cKick");
 		 stack.setItemMeta(meta);
-		 menu.setItem(1, stack);
+		 menu.setItem(9, stack);
+		 
+		 //heal
+		 ItemStack stack1 = new ItemStack (Material.APPLE, 1);
+		 ItemMeta meta1 = stack1.getItemMeta();
+		 meta1.setDisplayName("§aHeal");
+		 stack1.setItemMeta(meta1);
+		 menu.setItem(1, stack1);
 		 
 		 admin.openInventory(menu);
 	 }
