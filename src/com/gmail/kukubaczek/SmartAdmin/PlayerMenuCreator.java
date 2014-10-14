@@ -10,7 +10,8 @@ import org.bukkit.inventory.meta.ItemMeta;
 
 public class PlayerMenuCreator {
 	
-	 public static void reloadInv(Player admin, String player) {
+  @SuppressWarnings("deprecation")
+  public static void reloadInv(Player admin, String player) {
 		 Inventory menu = Bukkit.createInventory(null, 54, "§aS§fmart§bAdmin: §e" + player);
 		 
 		 Player gracz = Bukkit.getPlayerExact(player);

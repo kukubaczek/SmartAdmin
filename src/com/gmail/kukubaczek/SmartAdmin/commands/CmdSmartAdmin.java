@@ -17,6 +17,7 @@ public class CmdSmartAdmin implements CommandExecutor {
 
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
 		if(cmd.getName().equalsIgnoreCase("smartadmin")){
+    Main Main1 = new Main();
 			if(sender instanceof Player){
 				if(args.length == 0){
 					sender.sendMessage(Main.getTag("tag") + " §fWersja pluginu: §a" + Main.getPlugin().getDescription().getVersion() + "§f! Autor: §aKukubaczek§f!");
@@ -32,7 +33,7 @@ public class CmdSmartAdmin implements CommandExecutor {
 							MainMenuCreator.openInv((Player) sender);
 						}else if(args[0].equalsIgnoreCase("reload")){
 							sender.sendMessage(Main.getTag("tag") + " §fReloaduje config...");
-							Main.reloadCfg();
+							Main1.reloadCfg();
 							sender.sendMessage(Main.getTag("tag") + " §fZreloadowalem config!");
 						}else if(args[0].equalsIgnoreCase("get")){
 							sender.sendMessage(Main.getTag("tag") + " §fDodaje do ekwipunku §aSmartAdmin§f!");

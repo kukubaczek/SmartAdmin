@@ -6,7 +6,6 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 
 import com.gmail.kukubaczek.SmartAdmin.Main;
-import com.gmail.kukubaczek.SmartAdmin.functions.KickAll;
 
 public class CmdHelpOp implements CommandExecutor {
 	  public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
