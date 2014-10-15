@@ -10,12 +10,14 @@ W planach do dodania:
 - spawn mob
 - spawn (teleport)
 - set spawn
-- on first join
+- on first join message
 - gamemode
 - hat
 - repair
-- endersee
 - enderOpen komenda
-- crafting
-- enchant open
--avil pen
+  - widok ender jakiegoś gracza dla administracji
+  - widok ender swojego dla vipów itp 
+- crafting dla gracza
+- enchant open dla gracza
+- anvil pen dla gracza
+- piorun jakaś komenda
