@@ -21,3 +21,4 @@ W planach do dodania:
 - enchant open dla gracza
 - anvil pen dla gracza
 - piorun jakaś komenda
+- clearinv
