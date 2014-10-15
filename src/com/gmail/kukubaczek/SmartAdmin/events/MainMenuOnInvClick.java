@@ -76,7 +76,6 @@ public class MainMenuOnInvClick implements Listener{
             
             //gracze
           } else if(clicked.getDisplayName() == "§bZarządzaj graczami"){
-            //player.sendMessage("o kurwa dziala");
             player.closeInventory();
             PlayersListCreator.openInv(player, 1);
           }
