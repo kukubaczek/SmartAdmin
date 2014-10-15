@@ -12,3 +12,10 @@ W planach do dodania:
 - set spawn
 - on first join
 - gamemode
+- hat
+- repair
+- endersee
+- enderOpen komenda
+- crafting
+- enchant open
+-avil pen
