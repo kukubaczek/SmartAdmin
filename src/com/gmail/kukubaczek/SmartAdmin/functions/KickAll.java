@@ -11,13 +11,13 @@ public class KickAll {
 
   public static void kickall(String admin, String reason){
     String reasonMsg;
-    if(reason == ""){
+    if(reason.equals("")){
       reasonMsg = "";
     } else {
       reasonMsg = "\n§ePowód:\n§f" + reason;
     }
     for (Player p : Bukkit.getServer().getOnlinePlayers()) {
-      if (!p.isOp() && (p.getName() != admin)) {
+      if (!p.isOp() && !p.getName().equals(admin)) {
         p.kickPlayer("§aWszyscy gracze zostali wyrzuceni!" + "\n§ePrzez: §f" + admin + reasonMsg);
       }
     }
