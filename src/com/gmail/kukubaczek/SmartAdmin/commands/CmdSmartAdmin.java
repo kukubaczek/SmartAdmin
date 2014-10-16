@@ -26,7 +26,7 @@ public class CmdSmartAdmin implements CommandExecutor {
 					return true;
 				}else{
 					if(sender.hasPermission("SmartAdmin.*") || sender.hasPermission("SmartAdmin.Commands")){
-						if(args[0].equalsIgnoreCase("open")){
+						if(args[0].equalsIgnoreCase("open") || args[0].equalsIgnoreCase("o")){
 							sender.sendMessage(Main.getTag("tag") + " §fMenu zostalo otworzone!");
 							MainMenuCreator.openInv((Player) sender);
 						}else if(args[0].equalsIgnoreCase("reload")){
