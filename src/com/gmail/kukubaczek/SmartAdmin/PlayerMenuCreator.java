@@ -50,6 +50,13 @@ public class PlayerMenuCreator {
 		 meta.setLore(Arrays.asList("§7Edytuj enderchest gracza."));
 		 stack.setItemMeta(meta);
 		 menu.setItem(14, stack);
+		 //23
+		 stack = new ItemStack (Material.CHEST, 1);
+		 meta = stack.getItemMeta();
+		 meta.setDisplayName("§6Ekwipunek");
+		 meta.setLore(Arrays.asList("§7Edytuj ekwipunek gracza."));
+		 stack.setItemMeta(meta);
+		 menu.setItem(23, stack);
 		 
 		 admin.openInventory(menu);
 	 }

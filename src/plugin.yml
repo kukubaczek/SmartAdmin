@@ -17,6 +17,8 @@ commands:
     description: Wysyla wiadomosc do administracji.
   endersee:
     description: Pokazuje enderchest gracza.
+  invsee:
+    description: Pokazuje ekwipunek gracza.
     
 permissions:
   SmartAdmin.*:
