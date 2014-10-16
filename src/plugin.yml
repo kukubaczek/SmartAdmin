@@ -15,6 +15,8 @@ commands:
     description: Wyrzuca wszystkich graczy z serwera.
   helpop:
     description: Wysyla wiadomosc do administracji.
+  endersee:
+    description: Pokazuje enderchest gracza.
     
 permissions:
   SmartAdmin.*:

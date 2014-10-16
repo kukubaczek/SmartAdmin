@@ -6,6 +6,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import com.gmail.kukubaczek.SmartAdmin.commands.CmdEnderSee;
 import com.gmail.kukubaczek.SmartAdmin.commands.CmdHelpOp;
 import com.gmail.kukubaczek.SmartAdmin.commands.CmdKick;
 import com.gmail.kukubaczek.SmartAdmin.commands.CmdKickAll;
@@ -50,6 +51,7 @@ public class Main extends JavaPlugin{
     getCommand("Kick").setExecutor(new CmdKick());
     getCommand("KickAll").setExecutor(new CmdKickAll());
     getCommand("HelpOp").setExecutor(new CmdHelpOp());
+    getCommand("EnderSee").setExecutor(new CmdEnderSee());
     
     saveDefaultConfig();
     reloadCfg();

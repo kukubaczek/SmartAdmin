@@ -1,5 +1,7 @@
 package com.gmail.kukubaczek.SmartAdmin;
 
+import java.util.Arrays;
+
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.enchantments.Enchantment;
@@ -37,6 +39,7 @@ public class PlayerMenuCreator {
 		 stack = new ItemStack (Material.APPLE, 1);
 		 meta = stack.getItemMeta();
 		 meta.setDisplayName("§aUlecz");
+		 meta.setLore(Arrays.asList("§7Aktualnie: §a" + gracz.getHealth() + "§f/§c" + gracz.getMaxHealth()));
 		 stack.setItemMeta(meta);
 		 menu.setItem(10, stack);
 		 
