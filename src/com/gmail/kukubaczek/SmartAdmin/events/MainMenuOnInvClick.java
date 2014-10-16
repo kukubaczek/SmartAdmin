@@ -20,7 +20,7 @@ public class MainMenuOnInvClick implements Listener{
   public void onInventoryClick(InventoryClickEvent event) {
     Player player = (Player) event.getWhoClicked();
     Inventory inventory = event.getInventory();
-    if((inventory.getName() == "§aS§fmart§bA§fdmin") && (event.getCurrentItem() != null)){
+    if((inventory.getName().equals("§aS§fmart§bA§fdmin")) && (event.getCurrentItem() != null)){
       event.setCancelled(true);
       if(player.hasPermission("SmartAdmin.*")){
 
@@ -30,19 +30,19 @@ public class MainMenuOnInvClick implements Listener{
           World wrl = player.getWorld();
           
           //czat
-          if(clicked.getDisplayName() == "§cWyłącz chat"){
+          if(clicked.getDisplayName().equals("§cWyłącz chat")){
             Main.setVar("chat", false);
             Bukkit.broadcastMessage(Main.getTag("tag") + " §cChat został wyłączony!");
             Bukkit.broadcast(Main.getTag("tag") + " §a" + player.getName() + " §fwyłączył chat!", "SmartAdmin.*");
             MainMenuCreator.reloadInv();
             
-          } else if(clicked.getDisplayName() == "§aWłącz chat"){
+          } else if(clicked.getDisplayName().equals("§aWłącz chat")){
             Main.setVar("chat", true);
             Bukkit.broadcastMessage(Main.getTag("tag") + " §aChat został włączony!");
             Bukkit.broadcast(Main.getTag("tag") + " §a" + player.getName() + " §fwłączył chat!", "SmartAdmin.*");
             MainMenuCreator.reloadInv();
             
-          } else if(clicked.getDisplayName() == "§bWyczyść chat"){
+          } else if(clicked.getDisplayName().equals("§bWyczyść chat")){
             for (int i = 0; i < 100; i++){
               Bukkit.broadcastMessage(" ");
             }
@@ -50,32 +50,32 @@ public class MainMenuOnInvClick implements Listener{
             Bukkit.broadcast(Main.getTag("tag") + " §a" + player.getName() + " §fwyczyścił chat!", "SmartAdmin.*");
             
             //czas
-          } else if(clicked.getDisplayName() == "§eUstaw dzień"){
+          } else if(clicked.getDisplayName().equals("§eUstaw dzień")){
             wrl.setTime(1000L);
             Bukkit.broadcast(Main.getTag("tag") + " §a" + player.getName() + " §fustawił czas na §adzień§f w świecie §a" + wrl.getName() + "§f!", "SmartAdmin.*");
             
-          } else if(clicked.getDisplayName() == "§7Ustaw noc"){
+          } else if(clicked.getDisplayName().equals("§7Ustaw noc")){
             wrl.setTime(14000L);
             Bukkit.broadcast(Main.getTag("tag") + " §a" + player.getName() + " §fustawił czas na §anoc§f w świecie §a" + wrl.getName() + "§f!", "SmartAdmin.*");
             
             //deszcz
-          } else if(clicked.getDisplayName() == "§bWyłącz deszcz"){
+          } else if(clicked.getDisplayName().equals("§bWyłącz deszcz")){
             wrl.setStorm(false);
             wrl.setThundering(false);
             Bukkit.broadcast(Main.getTag("tag") + " §fDeszcz został §awyłączony §fprzez §a" + player.getName() + " §fw świecie §a" + wrl.getName() + "§f!", "SmartAdmin.*");
             
-          } else if(clicked.getDisplayName() == "§4Włącz deszcz"){
+          } else if(clicked.getDisplayName().equals("§4Włącz deszcz")){
             wrl.setStorm(true);
             wrl.setThundering(true);
             Bukkit.broadcast(Main.getTag("tag") + " §fDeszcz został §awłączony §fprzez §a" + player.getName() + " §fw świecie §a" + wrl.getName() + "§f!", "SmartAdmin.*");
             
             //kickall
-          } else if(clicked.getDisplayName() == "§bWyrzuć wszystkich graczy"){
+          } else if(clicked.getDisplayName().equals("§bWyrzuć wszystkich graczy")){
             KickAll.kickall(player.getName());
             Bukkit.broadcast(Main.getTag("tag") + " §fWszyscy gracze zostali wyrzuceni przez §a" + player.getName() + "§f!", "SmartAdmin.*");
             
             //gracze
-          } else if(clicked.getDisplayName() == "§bZarządzaj graczami"){
+          } else if(clicked.getDisplayName().equals("§bZarządzaj graczami")){
             player.closeInventory();
             PlayersListCreator.openInv(player, 1);
           }

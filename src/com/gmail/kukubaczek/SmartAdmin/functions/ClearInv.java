@@ -7,7 +7,8 @@ import com.gmail.kukubaczek.SmartAdmin.Main;
 
 public class ClearInv {
 
-	  public static void clearInv(Player admin, String enderplayer){
+	  @SuppressWarnings("deprecation")
+    public static void clearInv(Player admin, String enderplayer){
 	    	Player gracz = Bukkit.getPlayerExact(enderplayer);
 	    	if(gracz != null){
 	    		

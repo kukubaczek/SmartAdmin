@@ -18,7 +18,7 @@ public class PlayersListOnInvClick implements Listener{
   public void onInventoryClick(InventoryClickEvent event) {
     Player player = (Player) event.getWhoClicked();
     Inventory inventory = event.getInventory();
-    if((inventory.getName() == "§aS§fmart§bAdmin: §3Gracze") && (event.getCurrentItem() != null)){
+    if((inventory.getName().equals("§aS§fmart§bAdmin: §3Gracze")) && (event.getCurrentItem() != null)){
       event.setCancelled(true);
       if(player.hasPermission("SmartAdmin.*")){
 

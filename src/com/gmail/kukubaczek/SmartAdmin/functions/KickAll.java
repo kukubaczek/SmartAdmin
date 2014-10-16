@@ -11,7 +11,7 @@ public class KickAll {
 
   public static void kickall(String admin, String reason){
     String reasonMsg;
-    if(reason == ""){
+    if(reason.equals("")){
       reasonMsg = "";
     } else {
       reasonMsg = "\n§ePowód:\n§f" + reason;

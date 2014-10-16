@@ -27,26 +27,26 @@ public class PlayerMenuOnInvClick implements Listener{
 			String name = inventory.getName().substring(20);
 			Player gracz = Bukkit.getPlayerExact(name);
 			String itemname = item.getItemMeta().getDisplayName();
-			if(itemname == "§cWyrzuć z serwera"){
+			if(itemname.equals("§cWyrzuć z serwera")){
 				gracz.kickPlayer("§aZostałeś wyrzucony z serwera!" + "\n§ePrzez: §f" + player.getName());
 				Bukkit.broadcastMessage(Main.getTag("tag") + " §fGracz §a" + name + "§f został wyrzucony z serwera przez §a" + player.getName() + "§f!");
-			}else if(itemname == "§aUlecz"){
+			}else if(itemname.equals("§aUlecz")){
 				gracz.setHealth(20);
 				gracz.setFoodLevel(20);
 				Bukkit.broadcastMessage(Main.getTag("tag") + " §fGracz §a" + name + "§f został uleczony przez §a" + player.getName() + "§f!");
-			}else if(itemname == "§aFly"){
+			}else if(itemname.equals("§aFly")){
 				gracz.setAllowFlight(false);
 				Bukkit.broadcast(Main.getTag("tag") + " §a" + player.getName() + " §fwyłączył latanie dla gracza§a " + name + "§f!", "SmartAdmin.*");
 				PlayerMenuCreator.reloadInv(player, gracz.getName());
-			}else if(itemname == "§cFly"){
+			}else if(itemname.equals("§cFly")){
 				gracz.setAllowFlight(true);
 				Bukkit.broadcast(Main.getTag("tag") + " §a" + player.getName() + " §fwłączył latanie dla gracza§a " + name + "§f!", "SmartAdmin.*");
 				PlayerMenuCreator.reloadInv(player, gracz.getName());
-			}else if(itemname == "§bEnderChest"){
+			}else if(itemname.equals("§bEnderChest")){
 				EnderSee.enderSee(player, gracz.getName());
-			}else if(itemname == "§6Ekwipunek"){
+			}else if(itemname.equals("§6Ekwipunek")){
 				InvSee.invSee(player, gracz.getName());
-			}else if(itemname == "§eWyczyść ekwipunek"){
+			}else if(itemname.equals("§eWyczyść ekwipunek")){
 				ClearInv.clearInv(player, gracz.getName());
 			}
 		}

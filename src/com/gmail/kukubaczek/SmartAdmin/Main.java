@@ -3,7 +3,6 @@ package com.gmail.kukubaczek.SmartAdmin;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.event.Listener;
-import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import com.gmail.kukubaczek.SmartAdmin.commands.CmdClearInv;
@@ -25,7 +24,7 @@ import com.gmail.kukubaczek.SmartAdmin.events.JoinLeaveMsg;
 
 public class Main extends JavaPlugin{
 
-  private static Plugin plugin;
+  private static Main plugin;
 
   public static String tag_error;
   public static String tag_tag;
@@ -67,7 +66,7 @@ public class Main extends JavaPlugin{
     }
   }
 
-  public static Plugin getPlugin() {
+  public static Main getPlugin() {
     return plugin;
   }
 
