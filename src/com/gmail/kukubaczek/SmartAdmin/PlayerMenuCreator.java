@@ -58,6 +58,14 @@ public class PlayerMenuCreator {
 		 stack.setItemMeta(meta);
 		 menu.setItem(23, stack);
 		 
+		 //21
+		 stack = new ItemStack (Material.SUGAR, 1);
+		 meta = stack.getItemMeta();
+		 meta.setDisplayName("§eWyczyść ekwipunek");
+		 meta.setLore(Arrays.asList("§7Wyczyść ekwipunek gracza."));
+		 stack.setItemMeta(meta);
+		 menu.setItem(21, stack);		 
+		 
 		 admin.openInventory(menu);
 	 }
 }

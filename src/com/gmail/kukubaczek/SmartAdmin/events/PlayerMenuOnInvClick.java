@@ -10,6 +10,7 @@ import org.bukkit.inventory.ItemStack;
 
 import com.gmail.kukubaczek.SmartAdmin.Main;
 import com.gmail.kukubaczek.SmartAdmin.PlayerMenuCreator;
+import com.gmail.kukubaczek.SmartAdmin.functions.ClearInv;
 import com.gmail.kukubaczek.SmartAdmin.functions.EnderSee;
 import com.gmail.kukubaczek.SmartAdmin.functions.InvSee;
 
@@ -45,6 +46,8 @@ public class PlayerMenuOnInvClick implements Listener{
 				EnderSee.enderSee(player, gracz.getName());
 			}else if(itemname == "§6Ekwipunek"){
 				InvSee.invSee(player, gracz.getName());
+			}else if(itemname == "§eWyczyść ekwipunek"){
+				ClearInv.clearInv(player, gracz.getName());
 			}
 		}
 	  }
