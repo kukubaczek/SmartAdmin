@@ -24,6 +24,7 @@ public class CmdHelpOp implements CommandExecutor {
 			    }
 	
 			    Bukkit.broadcast("§4[§cHelpOp§4] §7" + sender.getName() + "§b >> §f" + msg, "SmartAdmin.*");
+			    sender.sendMessage("§4[§cHelpOp§4]§b >> §f" + msg);
 	
 			    return true;
 		    }
