@@ -5,6 +5,8 @@ import org.bukkit.ChatColor;
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
+import java.util.HashMap;
+import java.util.Map;
 
 import com.gmail.kukubaczek.SmartAdmin.commands.CmdClearInv;
 import com.gmail.kukubaczek.SmartAdmin.commands.CmdEnderSee;
@@ -33,7 +35,7 @@ public class Main extends JavaPlugin{
   public static String join_msg;
   public static String leave_msg;
 
-  public static boolean chat = true;
+  public static Map<String, Boolean> vars;
 
   /*
    * 
@@ -45,6 +47,11 @@ public class Main extends JavaPlugin{
   @Override
   public void onEnable() {
     plugin = this;
+    vars = new HashMap<String, Boolean>();
+    
+    /* Set varibles */
+    vars.put("chat", true);
+    /* END */
     
     registerEvents(this, new OnChat(), new MainMenuOnInvClick(), new PlayersListOnInvClick(), new PlayerMenuOnInvClick(), new OnInvOpen(), new OnRightClick(), new OnDamage(), new JoinLeaveMsg());
     
@@ -71,20 +78,12 @@ public class Main extends JavaPlugin{
     return plugin;
   }
 
-  public static void setVar(String var, boolean set){
-    if(var.equalsIgnoreCase("chat")){
-      chat = set;
-    }else{
-      return;
-    }
+  public static void setVar(String var, boolean value){
+    vars.put(var, value);
   }
 
   public static boolean getVar(String var){
-    if(var.equalsIgnoreCase("chat")){
-      return chat;
-    }else{
-      return false;
-    }
+    return vars.containsKey(var) ? vars.get(var) : false;
   }
   
   public static void reloadCfg(){
