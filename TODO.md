@@ -22,3 +22,5 @@ W planach do dodania:
 - anvil pen dla gracza
 - piorun jakaś komenda
 - clearinv
+- usunięcie migania menu przy w(y)łączaniu fly
+- 
