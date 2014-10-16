@@ -1,12 +1,12 @@
 W planach do dodania:
 ==========
 - god
-- feed
+- feed // jest w heal
 - kill
 - tempban
 - dead msg
 - kolorowe motd
-- inv see
+- ~~inv see~~
 - spawn mob
 - spawn (teleport)
 - set spawn
@@ -14,12 +14,12 @@ W planach do dodania:
 - gamemode
 - hat
 - repair
-- enderOpen komenda
-  - widok ender jakiegoś gracza dla administracji
+- ~~enderOpen komenda~~
+  - ~~widok ender jakiegoś gracza dla administracji~~
   - widok ender swojego dla vipów itp 
 - crafting dla gracza
 - enchant open dla gracza
 - anvil pen dla gracza
 - piorun jakaś komenda
-- clearinv
+- ~~clearinv~~
 - usunięcie migania menu przy w(y)łączaniu fly //nie udało mi się - kuku
