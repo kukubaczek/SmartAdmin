@@ -10,6 +10,7 @@ import org.bukkit.inventory.ItemStack;
 
 import com.gmail.kukubaczek.SmartAdmin.Main;
 import com.gmail.kukubaczek.SmartAdmin.PlayerMenuCreator;
+import com.gmail.kukubaczek.SmartAdmin.functions.EnderSee;
 
 public class PlayerMenuOnInvClick implements Listener{
 
@@ -39,6 +40,8 @@ public class PlayerMenuOnInvClick implements Listener{
 				gracz.setAllowFlight(true);
 				Bukkit.broadcast(Main.getTag("tag") + " §a" + player.getName() + " §fwłączył latanie dla gracza§a " + name + "§f!", "SmartAdmin.*");
 				PlayerMenuCreator.reloadInv(player, gracz.getName());
+			}else if(itemname == "§bEnderChest"){
+				EnderSee.enderSee(player, gracz.getName());
 			}
 		}
 	  }
