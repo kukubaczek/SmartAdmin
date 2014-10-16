@@ -8,6 +8,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 import com.gmail.kukubaczek.SmartAdmin.commands.CmdEnderSee;
 import com.gmail.kukubaczek.SmartAdmin.commands.CmdHelpOp;
+import com.gmail.kukubaczek.SmartAdmin.commands.CmdInvSee;
 import com.gmail.kukubaczek.SmartAdmin.commands.CmdKick;
 import com.gmail.kukubaczek.SmartAdmin.commands.CmdKickAll;
 import com.gmail.kukubaczek.SmartAdmin.commands.CmdSmartAdmin;
@@ -52,6 +53,7 @@ public class Main extends JavaPlugin{
     getCommand("KickAll").setExecutor(new CmdKickAll());
     getCommand("HelpOp").setExecutor(new CmdHelpOp());
     getCommand("EnderSee").setExecutor(new CmdEnderSee());
+    getCommand("InvSee").setExecutor(new CmdInvSee());
     
     saveDefaultConfig();
     reloadCfg();
