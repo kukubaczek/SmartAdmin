@@ -19,6 +19,9 @@ commands:
     description: Pokazuje enderchest gracza.
   invsee:
     description: Pokazuje ekwipunek gracza.
+  ClearInv:
+    description: Czysci ekwipunek.
+    aliases: [cinv, ci]
     
 permissions:
   SmartAdmin.*:

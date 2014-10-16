@@ -6,6 +6,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import com.gmail.kukubaczek.SmartAdmin.commands.CmdClearInv;
 import com.gmail.kukubaczek.SmartAdmin.commands.CmdEnderSee;
 import com.gmail.kukubaczek.SmartAdmin.commands.CmdHelpOp;
 import com.gmail.kukubaczek.SmartAdmin.commands.CmdInvSee;
@@ -54,6 +55,7 @@ public class Main extends JavaPlugin{
     getCommand("HelpOp").setExecutor(new CmdHelpOp());
     getCommand("EnderSee").setExecutor(new CmdEnderSee());
     getCommand("InvSee").setExecutor(new CmdInvSee());
+    getCommand("ClearInv").setExecutor(new CmdClearInv());
     
     saveDefaultConfig();
     reloadCfg();
