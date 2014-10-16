@@ -23,4 +23,3 @@ W planach do dodania:
 - piorun jakaś komenda
 - clearinv
 - usunięcie migania menu przy w(y)łączaniu fly
-- 
