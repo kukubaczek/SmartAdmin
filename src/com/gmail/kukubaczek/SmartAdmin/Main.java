@@ -16,6 +16,7 @@ import com.gmail.kukubaczek.SmartAdmin.events.OnChat;
 import com.gmail.kukubaczek.SmartAdmin.events.MainMenuOnInvClick;
 import com.gmail.kukubaczek.SmartAdmin.events.OnDamage;
 import com.gmail.kukubaczek.SmartAdmin.events.OnRightClick;
+import com.gmail.kukubaczek.SmartAdmin.events.OnRightClickPlayer;
 import com.gmail.kukubaczek.SmartAdmin.events.PlayerMenuOnInvClick;
 import com.gmail.kukubaczek.SmartAdmin.events.PlayersListOnInvClick;
 import com.gmail.kukubaczek.SmartAdmin.events.antycheat.OnInvOpen;
@@ -45,7 +46,7 @@ public class Main extends JavaPlugin{
   public void onEnable() {
     plugin = this;
     
-    registerEvents(this, new OnChat(), new MainMenuOnInvClick(), new PlayersListOnInvClick(), new PlayerMenuOnInvClick(), new OnInvOpen(), new OnRightClick(), new OnDamage(), new JoinLeaveMsg());
+    registerEvents(this, new OnChat(), new MainMenuOnInvClick(), new PlayersListOnInvClick(), new PlayerMenuOnInvClick(), new OnInvOpen(), new OnRightClick(), new OnRightClickPlayer(), new OnDamage(), new JoinLeaveMsg());
     
     getCommand("SmartAdmin").setExecutor(new CmdSmartAdmin());
     getCommand("Kick").setExecutor(new CmdKick());
