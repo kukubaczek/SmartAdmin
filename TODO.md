@@ -6,7 +6,6 @@ W planach do dodania:
 - tempban
 - dead msg
 - kolorowe motd
-- ~~inv see~~
 - spawn mob
 - spawn (teleport)
 - set spawn
@@ -15,11 +14,18 @@ W planach do dodania:
 - hat
 - repair
 - ~~enderOpen komenda~~
-  - ~~widok ender jakiegoś gracza dla administracji~~
   - widok ender swojego dla vipów itp 
 - crafting dla gracza
 - enchant open dla gracza
 - anvil pen dla gracza
 - piorun jakaś komenda
-- ~~clearinv~~
 - usunięcie migania menu przy w(y)łączaniu fly //nie udało mi się - kuku
+
+==========
+ZROBIONE:
+
+- ~~różdżka otwierające menu gracza~~
+- ~~enderOpen komenda~~
+  - ~~widok ender jakiegoś gracza dla administracji~~
+- ~~clearinv~~
+- ~~inv see~~
