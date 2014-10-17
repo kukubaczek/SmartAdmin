@@ -10,7 +10,7 @@ W planach do dodania:
 - spawn (teleport)
 - set spawn
 - on first join message
-- gamemode
+- ~~gamemode~~
 - hat
 - repair
 - ~~enderOpen komenda~~
@@ -21,11 +21,13 @@ W planach do dodania:
 - piorun jakaś komenda
 - usunięcie migania menu przy w(y)łączaniu fly //nie udało mi się - kuku
 
-==========
-ZROBIONE:
+Zrobione:
+=====
 
 - ~~różdżka otwierające menu gracza~~
 - ~~enderOpen komenda~~
   - ~~widok ender jakiegoś gracza dla administracji~~
 - ~~clearinv~~
 - ~~inv see~~
+- ~~gamemode~~
+- ~~szybki dostep do zarzadzania soba w glownym menu~~

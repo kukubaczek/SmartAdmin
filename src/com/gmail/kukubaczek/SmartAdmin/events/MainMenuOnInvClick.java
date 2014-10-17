@@ -11,6 +11,7 @@ import org.bukkit.inventory.meta.ItemMeta;
 
 import com.gmail.kukubaczek.SmartAdmin.Main;
 import com.gmail.kukubaczek.SmartAdmin.MainMenuCreator;
+import com.gmail.kukubaczek.SmartAdmin.PlayerMenuCreator;
 import com.gmail.kukubaczek.SmartAdmin.PlayersListCreator;
 import com.gmail.kukubaczek.SmartAdmin.functions.KickAll;
 
@@ -34,13 +35,13 @@ public class MainMenuOnInvClick implements Listener{
             Main.setVar("chat", false);
             Bukkit.broadcastMessage(Main.getTag("tag") + " §cChat został wyłączony!");
             Bukkit.broadcast(Main.getTag("tag") + " §a" + player.getName() + " §fwyłączył chat!", "SmartAdmin.*");
-            MainMenuCreator.reloadInv();
+            MainMenuCreator.reloadInv(player);
             
           } else if(clicked.getDisplayName().equals("§aWłącz chat")){
             Main.setVar("chat", true);
             Bukkit.broadcastMessage(Main.getTag("tag") + " §aChat został włączony!");
             Bukkit.broadcast(Main.getTag("tag") + " §a" + player.getName() + " §fwłączył chat!", "SmartAdmin.*");
-            MainMenuCreator.reloadInv();
+            MainMenuCreator.reloadInv(player);
             
           } else if(clicked.getDisplayName().equals("§bWyczyść chat")){
             for (int i = 0; i < 100; i++){
@@ -78,6 +79,11 @@ public class MainMenuOnInvClick implements Listener{
           } else if(clicked.getDisplayName().equals("§bZarządzaj graczami")){
             player.closeInventory();
             PlayersListCreator.openInv(player, 1);
+            
+            //ty
+          } else if(clicked.getDisplayName().equals("§bZarządzaj sobą")){
+            player.closeInventory();
+            PlayerMenuCreator.openInv(player, player.getName());
           }
         }
 

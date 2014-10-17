@@ -14,7 +14,7 @@ public class MainMenuCreator {
 	
 	static Inventory menu = Bukkit.createInventory(null, 54, "§aS§fmart§bA§fdmin");
 
-	public static void reloadInv() {
+	public static void reloadInv(Player player) {
 		menu.clear();
 		
 		//czat
@@ -83,14 +83,23 @@ public class MainMenuCreator {
 	  stack = new ItemStack(Material.SKULL_ITEM, 1, (short) 3);
 	  SkullMeta skullMeta = (SkullMeta) stack.getItemMeta();
 	  skullMeta.setDisplayName("§bZarządzaj graczami");
-	  skullMeta.setOwner("jakis_stiwek"); //zmieniłem to bo się bugowała główka na 1.8 :< kuku
+	  skullMeta.setOwner("Steve");
 	  skullMeta.setLore(Arrays.asList("§7Wyświetla menu z graczami do zarządzania nimi.","§7np. kick, gm, fly"));
 	  stack.setItemMeta(skullMeta);
-	  menu.setItem(37, stack);
+	  menu.setItem(22, stack);
+	  
+	  //ty
+    stack = new ItemStack(Material.SKULL_ITEM, 1, (short) 3);
+    skullMeta = (SkullMeta) stack.getItemMeta();
+    skullMeta.setDisplayName("§bZarządzaj sobą");
+    skullMeta.setOwner(player.getName());
+    skullMeta.setLore(Arrays.asList("§7Wyświetla menu zarządzania graczem §a" + player.getName()));
+    stack.setItemMeta(skullMeta);
+    menu.setItem(31, stack);
 	}
 	
 	public static void openInv(Player player){
-	  reloadInv();
+	  reloadInv(player);
 	  player.openInventory(menu);
 	}
 }

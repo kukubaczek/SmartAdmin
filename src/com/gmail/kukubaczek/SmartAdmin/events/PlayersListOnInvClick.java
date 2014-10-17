@@ -30,7 +30,7 @@ public class PlayersListOnInvClick implements Listener{
               player.closeInventory();
               PlayersListCreator.openInv(player, Integer.parseInt(name.substring(11)));
             } else {
-              PlayerMenuCreator.reloadInv(player, name.substring(2));
+              PlayerMenuCreator.openInv(player, name.substring(2));
             }
         }
       } else {
