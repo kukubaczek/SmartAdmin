@@ -23,7 +23,7 @@ public class CmdHelpOp implements CommandExecutor {
 			      msg += args[i] + " ";
 			    }
 	
-			    Bukkit.broadcast("§4[§cHelpOp§4] §7" + sender.getName() + "§b >> §f" + msg, "SmartAdmin.*");
+			    Bukkit.broadcast("§4[§cHelpOp§4] §7" + sender.getName() + "§b » §f" + msg, "SmartAdmin.*");
 			    sender.sendMessage("§4[§cHelpOp§4] §f" + msg);
 	
 			    return true;

@@ -27,11 +27,11 @@ public class PlayersListOnInvClick implements Listener{
         if(clicked.hasDisplayName()){
           String name = clicked.getDisplayName();
           if(name.startsWith("§bStrona §a")){
-            player.closeInventory();
-            PlayersListCreator.openInv(player, Integer.parseInt(name.substring(11)));
-          } else {
-            PlayerMenuCreator.reloadInv(player, name.substring(2));
-          }
+              player.closeInventory();
+              PlayersListCreator.openInv(player, Integer.parseInt(name.substring(11)));
+            } else {
+              PlayerMenuCreator.reloadInv(player, name.substring(2));
+            }
         }
       } else {
         player.sendMessage(Main.getTag("error") + " §fNie posiadasz wystarczających uprawnień!");
