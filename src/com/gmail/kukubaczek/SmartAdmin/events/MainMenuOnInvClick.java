@@ -29,57 +29,57 @@ public class MainMenuOnInvClick implements Listener{
         if(clicked == null) return;
         if(clicked.hasDisplayName()){
           World wrl = player.getWorld();
-          
+
           //czat
           if(clicked.getDisplayName().equals("§cWyłącz chat")){
             Main.setVar("chat", false);
             Bukkit.broadcastMessage(Main.getTag("tag") + " §cChat został wyłączony!");
             Bukkit.broadcast(Main.getTag("tag") + " §a" + player.getName() + " §fwyłączył chat!", "SmartAdmin.*");
             MainMenuCreator.reloadInv(player);
-            
+
           } else if(clicked.getDisplayName().equals("§aWłącz chat")){
             Main.setVar("chat", true);
             Bukkit.broadcastMessage(Main.getTag("tag") + " §aChat został włączony!");
             Bukkit.broadcast(Main.getTag("tag") + " §a" + player.getName() + " §fwłączył chat!", "SmartAdmin.*");
             MainMenuCreator.reloadInv(player);
-            
+
           } else if(clicked.getDisplayName().equals("§bWyczyść chat")){
             for (int i = 0; i < 100; i++){
               Bukkit.broadcastMessage(" ");
             }
             Bukkit.broadcastMessage(Main.getTag("tag") + " §bChat został wyczyszczony!");
             Bukkit.broadcast(Main.getTag("tag") + " §a" + player.getName() + " §fwyczyścił chat!", "SmartAdmin.*");
-            
+
             //czas
           } else if(clicked.getDisplayName().equals("§eUstaw dzień")){
             wrl.setTime(1000L);
             Bukkit.broadcast(Main.getTag("tag") + " §a" + player.getName() + " §fustawił czas na §adzień§f w świecie §a" + wrl.getName() + "§f!", "SmartAdmin.*");
-            
+
           } else if(clicked.getDisplayName().equals("§7Ustaw noc")){
             wrl.setTime(14000L);
             Bukkit.broadcast(Main.getTag("tag") + " §a" + player.getName() + " §fustawił czas na §anoc§f w świecie §a" + wrl.getName() + "§f!", "SmartAdmin.*");
-            
+
             //deszcz
           } else if(clicked.getDisplayName().equals("§bWyłącz deszcz")){
             wrl.setStorm(false);
             wrl.setThundering(false);
             Bukkit.broadcast(Main.getTag("tag") + " §fDeszcz został §awyłączony §fprzez §a" + player.getName() + " §fw świecie §a" + wrl.getName() + "§f!", "SmartAdmin.*");
-            
+
           } else if(clicked.getDisplayName().equals("§4Włącz deszcz")){
             wrl.setStorm(true);
             wrl.setThundering(true);
             Bukkit.broadcast(Main.getTag("tag") + " §fDeszcz został §awłączony §fprzez §a" + player.getName() + " §fw świecie §a" + wrl.getName() + "§f!", "SmartAdmin.*");
-            
+
             //kickall
           } else if(clicked.getDisplayName().equals("§bWyrzuć wszystkich graczy")){
             KickAll.kickall(player.getName());
             Bukkit.broadcast(Main.getTag("tag") + " §fWszyscy gracze zostali wyrzuceni przez §a" + player.getName() + "§f!", "SmartAdmin.*");
-            
+
             //gracze
           } else if(clicked.getDisplayName().equals("§bZarządzaj graczami")){
             player.closeInventory();
             PlayersListCreator.openInv(player, 1);
-            
+
             //ty
           } else if(clicked.getDisplayName().equals("§bZarządzaj sobą")){
             player.closeInventory();

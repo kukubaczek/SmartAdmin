@@ -9,7 +9,7 @@ import org.bukkit.event.player.PlayerKickEvent;
 import com.gmail.kukubaczek.SmartAdmin.Main;
 
 public class OnJoinLeave implements Listener{
-  
+
   @EventHandler
   public void onLeave(PlayerQuitEvent event) {
     if(Main.leave_msg.equalsIgnoreCase("false")){

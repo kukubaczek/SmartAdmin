@@ -35,6 +35,7 @@ public class Main extends JavaPlugin{
   public static String join_msg;
   public static String leave_msg;
   public static String max_players;
+  public static String full_server_msg;
 
   public static boolean chat = true;
 
@@ -48,9 +49,9 @@ public class Main extends JavaPlugin{
   @Override
   public void onEnable() {
     plugin = this;
-    
+
     registerEvents(this, new OnChat(), new OnPing(), new MainMenuOnInvClick(), new PlayersListOnInvClick(), new PlayerMenuOnInvClick(), new OnInvOpen(), new OnRightClick(), new OnRightClickPlayer(), new OnDamage(), new OnJoinLeave(), new OnPlayerLogin());
-    
+
     getCommand("SmartAdmin").setExecutor(new CmdSmartAdmin());
     getCommand("Kick").setExecutor(new CmdKick());
     getCommand("KickAll").setExecutor(new CmdKickAll());
@@ -58,10 +59,10 @@ public class Main extends JavaPlugin{
     getCommand("EnderSee").setExecutor(new CmdEnderSee());
     getCommand("InvSee").setExecutor(new CmdInvSee());
     getCommand("ClearInv").setExecutor(new CmdClearInv());
-    
+
     saveDefaultConfig();
     reloadCfg();
-    
+
   }
 
   public static void registerEvents(org.bukkit.plugin.Plugin plugin, Listener... listeners) {
@@ -89,7 +90,7 @@ public class Main extends JavaPlugin{
       return false;
     }
   }
-  
+
   public static void reloadCfg(){
     plugin.reloadConfig();
     tag_tag = ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("TAG"));
@@ -97,6 +98,7 @@ public class Main extends JavaPlugin{
     tag_AC = ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("TAG_ANTYCHEAT"));
     join_msg = ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("JOIN_MESSAGE"));
     leave_msg = ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("LEAVE_MESSAGE"));
+    full_server_msg = ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("FULL_SERVER_MESSAGE"));
     max_players = plugin.getConfig().getString("MAX_PLAYERS");
   }
 
