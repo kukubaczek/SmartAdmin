@@ -3,6 +3,7 @@ package com.gmail.kukubaczek.SmartAdmin;
 import java.util.Arrays;
 
 import org.bukkit.Bukkit;
+import org.bukkit.GameMode;
 import org.bukkit.Material;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Player;
@@ -65,29 +66,63 @@ public class PlayerMenuCreator {
 		 meta.setDisplayName("§eWyczyść ekwipunek");
 		 meta.setLore(Arrays.asList("§7Wyczyść ekwipunek gracza."));
 		 stack.setItemMeta(meta);
-		 menu.setItem(21, stack);
+		 menu.setItem(28, stack);
+		 
+		 //kill
+		 stack = new ItemStack (Material.ANVIL, 1);
+		 meta = stack.getItemMeta();
+		 meta.setDisplayName("§cZabij gracza");
+		 meta.setLore(Arrays.asList("§7Ukatrup gracza."));
+		 stack.setItemMeta(meta);
+		 menu.setItem(37, stack);
+		 
+		 //tp
+		 stack = new ItemStack (Material.COOKIE, 1);
+		 meta = stack.getItemMeta();
+		 meta.setDisplayName("§aPrzeteleportuj się");
+		 meta.setLore(Arrays.asList("§7Przeteleportuj się", "§7do gracza §a" + gracz.getName()));
+		 stack.setItemMeta(meta);
+		 menu.setItem(32, stack);
+		 
+		 //tp 2
+		 stack = new ItemStack (Material.CAKE, 1);
+		 meta = stack.getItemMeta();
+		 meta.setDisplayName("§aPrzeteleportuj go");
+		 meta.setLore(Arrays.asList("§7Przeteleportuj gracza", "§a" + gracz.getName() + " §7do siebie!"));
+		 stack.setItemMeta(meta);
+		 menu.setItem(41, stack);
+		 
 		 
 		//gamemody
      stack = new ItemStack (Material.GOLD_PICKAXE, 1);
      meta = stack.getItemMeta();
      meta.setDisplayName("§eZmień tryb gry na Survival");
      meta.setLore(Arrays.asList("§7Zmień tryb gracza na przetrwanie."));
+     if(gracz.getGameMode() == GameMode.SURVIVAL){
+    	 meta.addEnchant(Enchantment.ARROW_DAMAGE, 1, true);
+     }
      stack.setItemMeta(meta);
-     menu.setItem(38, stack);
+     menu.setItem(25, stack);
      
      stack = new ItemStack (Material.GOLD_SPADE, 1);
      meta = stack.getItemMeta();
      meta.setDisplayName("§eZmień tryb gry na Creative");
      meta.setLore(Arrays.asList("§7Zmień tryb gracza na kreatywny."));
+     if(gracz.getGameMode() == GameMode.CREATIVE){
+    	 meta.addEnchant(Enchantment.ARROW_DAMAGE, 1, true);
+     }
      stack.setItemMeta(meta);
-     menu.setItem(39, stack);
+     menu.setItem(34, stack);
      
      stack = new ItemStack (Material.GOLD_SWORD, 1);
      meta = stack.getItemMeta();
      meta.setDisplayName("§eZmień tryb gry na Adventure");
      meta.setLore(Arrays.asList("§7Zmień tryb gracza na przygodowy."));
+     if(gracz.getGameMode() == GameMode.ADVENTURE){
+    	 meta.addEnchant(Enchantment.ARROW_DAMAGE, 1, true);
+     }
      stack.setItemMeta(meta);
-     menu.setItem(40, stack);
+     menu.setItem(43, stack);
 		 
 		 admin.openInventory(menu);
 	 }

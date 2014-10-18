@@ -83,19 +83,19 @@ public class MainMenuCreator {
 	  stack = new ItemStack(Material.SKULL_ITEM, 1, (short) 3);
 	  SkullMeta skullMeta = (SkullMeta) stack.getItemMeta();
 	  skullMeta.setDisplayName("§bZarządzaj graczami");
-	  skullMeta.setOwner("Steve");
+	  skullMeta.setOwner("Zbigniew");
 	  skullMeta.setLore(Arrays.asList("§7Wyświetla menu z graczami do zarządzania nimi.","§7np. kick, gm, fly"));
 	  stack.setItemMeta(skullMeta);
-	  menu.setItem(22, stack);
+	  menu.setItem(12, stack);
 	  
 	  //ty
     stack = new ItemStack(Material.SKULL_ITEM, 1, (short) 3);
     skullMeta = (SkullMeta) stack.getItemMeta();
     skullMeta.setDisplayName("§bZarządzaj sobą");
     skullMeta.setOwner(player.getName());
-    skullMeta.setLore(Arrays.asList("§7Wyświetla menu zarządzania graczem §a" + player.getName()));
+    skullMeta.setLore(Arrays.asList("§7Wyświetla menu zarządzania ", "§7graczem §a" + player.getName()));
     stack.setItemMeta(skullMeta);
-    menu.setItem(31, stack);
+    menu.setItem(21, stack);
 	}
 	
 	public static void openInv(Player player){

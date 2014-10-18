@@ -26,3 +26,5 @@ commands:
 permissions:
   SmartAdmin.*:
     default: op
+    children:
+      SmartAdmin.AntyCheat: true
