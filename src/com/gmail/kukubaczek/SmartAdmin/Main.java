@@ -15,6 +15,7 @@ import com.gmail.kukubaczek.SmartAdmin.commands.CmdSmartAdmin;
 import com.gmail.kukubaczek.SmartAdmin.events.OnChat;
 import com.gmail.kukubaczek.SmartAdmin.events.MainMenuOnInvClick;
 import com.gmail.kukubaczek.SmartAdmin.events.OnDamage;
+import com.gmail.kukubaczek.SmartAdmin.events.OnPing;
 import com.gmail.kukubaczek.SmartAdmin.events.OnRightClick;
 import com.gmail.kukubaczek.SmartAdmin.events.OnRightClickPlayer;
 import com.gmail.kukubaczek.SmartAdmin.events.PlayerMenuOnInvClick;
@@ -32,6 +33,9 @@ public class Main extends JavaPlugin{
   public static String tag_AC;
   public static String join_msg;
   public static String leave_msg;
+  public static int FakeSlots;
+  
+  public static String motd;
 
   public static boolean chat = true;
 
@@ -46,7 +50,7 @@ public class Main extends JavaPlugin{
   public void onEnable() {
     plugin = this;
     
-    registerEvents(this, new OnChat(), new MainMenuOnInvClick(), new PlayersListOnInvClick(), new PlayerMenuOnInvClick(), new OnInvOpen(), new OnRightClick(), new OnRightClickPlayer(), new OnDamage(), new JoinLeaveMsg());
+    registerEvents(this, new OnChat(), new OnPing(), new MainMenuOnInvClick(), new PlayersListOnInvClick(), new PlayerMenuOnInvClick(), new OnInvOpen(), new OnRightClick(), new OnRightClickPlayer(), new OnDamage(), new JoinLeaveMsg());
     
     getCommand("SmartAdmin").setExecutor(new CmdSmartAdmin());
     getCommand("Kick").setExecutor(new CmdKick());
@@ -55,6 +59,8 @@ public class Main extends JavaPlugin{
     getCommand("EnderSee").setExecutor(new CmdEnderSee());
     getCommand("InvSee").setExecutor(new CmdInvSee());
     getCommand("ClearInv").setExecutor(new CmdClearInv());
+    
+    motd = Bukkit.getMotd();
     
     saveDefaultConfig();
     reloadCfg();
@@ -94,6 +100,7 @@ public class Main extends JavaPlugin{
     tag_AC = ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("TAG_ANTYCHEAT"));
     join_msg = ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("JOIN_MESSAGE"));
     leave_msg = ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("LEAVE_MESSAGE"));
+    FakeSlots = plugin.getConfig().getInt("FakeSlots");
   }
 
   public static String getTag(String tag){
