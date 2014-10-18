@@ -13,12 +13,13 @@ public class CmdKickAll implements CommandExecutor {
       return true;
     }
 
-    String reason = "";
+    StringBuilder reason = new StringBuilder("");
+    
     for(int i = 0; i < args.length; i++){
-      reason += args[i] + " ";
+      reason.append(args[i]);
     }
 
-    KickAll.kickall(sender.getName(), reason);
+    KickAll.kickall(sender.getName(), reason.toString());
 
     return true;
   }
