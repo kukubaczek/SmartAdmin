@@ -1,5 +1,6 @@
 package com.gmail.kukubaczek.SmartAdmin.commands;
 
+import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -21,6 +22,7 @@ public class CmdInvSee implements CommandExecutor {
     if(args.length == 0){
       sender.sendMessage(Main.getTag("error") + " §fPodaj gracza, którego ekwipunek chcesz zobaczyć! §a/§fInvSee §a<§fgracz§a>§f!");
     }else{
+      Bukkit.broadcast(Main.getTag("tag") + " §a" + sender.getName() + " §fotworzył ekwipunek gracza§a " + args[0] + "§f!", "SmartAdmin.*");
       InvSee.invSee((Player) sender, args[0]);
     }
     return false;

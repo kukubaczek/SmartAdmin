@@ -1,5 +1,6 @@
 package com.gmail.kukubaczek.SmartAdmin.commands;
 
+import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -21,6 +22,7 @@ public class CmdEnderSee implements CommandExecutor {
     if(args.length == 0){
       sender.sendMessage(Main.getTag("error") + " §fPodaj gracza, którego enderchest chcesz zobaczyć! §a/§fEnderSee §a<§fgracz§a>§f!");
     }else{
+      Bukkit.broadcast(Main.getTag("tag") + " §a" + sender.getName() + " §fotworzył enderchest gracza§a " + args[0] + "§f!", "SmartAdmin.*");
       EnderSee.enderSee((Player) sender, args[0]);
     }
     return false;

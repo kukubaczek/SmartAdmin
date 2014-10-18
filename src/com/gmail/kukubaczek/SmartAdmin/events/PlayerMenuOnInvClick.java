@@ -45,10 +45,13 @@ public class PlayerMenuOnInvClick implements Listener{
           Bukkit.broadcast(Main.getTag("tag") + " §a" + admin.getName() + " §fwłączył latanie dla gracza§a " + name + "§f!", "SmartAdmin.*");
           PlayerMenuCreator.openInv(admin, gracz.getName());
         }else if(itemname.equals("§bEnderChest")){
+          Bukkit.broadcast(Main.getTag("tag") + " §a" + admin.getName() + " §fotworzył enderchest gracza§a " + name + "§f!", "SmartAdmin.*");
           EnderSee.enderSee(admin, gracz.getName());
         }else if(itemname.equals("§6Ekwipunek")){
+          Bukkit.broadcast(Main.getTag("tag") + " §a" + admin.getName() + " §fotworzył ekwipunek gracza§a " + name + "§f!", "SmartAdmin.*");
           InvSee.invSee(admin, gracz.getName());
         }else if(itemname.equals("§eWyczyść ekwipunek")){
+          Bukkit.broadcast(Main.getTag("tag") + " §a" + admin.getName() + " §fwyczyścił ekwipunek gracza§a " + name + "§f!", "SmartAdmin.*");
           ClearInv.clearInv(admin, gracz.getName());
         }else if(itemname.equals("§eZmień tryb gry na Survival")){
           gracz.setGameMode(GameMode.SURVIVAL);

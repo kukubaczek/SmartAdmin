@@ -1,8 +1,11 @@
 package com.gmail.kukubaczek.SmartAdmin.commands;
 
+import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
+
+import com.gmail.kukubaczek.SmartAdmin.Main;
 import com.gmail.kukubaczek.SmartAdmin.functions.KickAll;
 
 public class CmdKickAll implements CommandExecutor {
@@ -22,6 +25,7 @@ public class CmdKickAll implements CommandExecutor {
     }
 
     KickAll.kickall(sender.getName(), reason.toString());
+    Bukkit.broadcast(Main.getTag("tag") + " §fWszyscy gracze zostali wyrzuceni przez §a" + sender.getName() + "§f!", "SmartAdmin.*");
 
     return true;
   }
