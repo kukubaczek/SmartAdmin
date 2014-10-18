@@ -1,8 +1,6 @@
 W planach do dodania:
 ==========
 - god
-- feed // jest w heal
-- kill
 - tempban
 - dead msg
 - kolorowe motd
@@ -31,3 +29,5 @@ Zrobione:
 - ~~inv see~~
 - ~~gamemode~~
 - ~~szybki dostep do zarzadzania soba w glownym menu~~
+- ~~kill~~
+- ~~feed // jest w heal~~
