@@ -3,4 +3,4 @@ TAG_ERROR: "&4[&7SmartAdmin&4]"
 TAG_ANTYCHEAT: "&6[&eSmartAdmin&6]"
 JOIN_MESSAGE: "&a{player} &7joined the game"
 LEAVE_MESSAGE: "&a{player} &7left the game"
-FakeSlots: 15
+MAX_PLAYERS: true

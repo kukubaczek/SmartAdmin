@@ -16,12 +16,13 @@ import com.gmail.kukubaczek.SmartAdmin.events.OnChat;
 import com.gmail.kukubaczek.SmartAdmin.events.MainMenuOnInvClick;
 import com.gmail.kukubaczek.SmartAdmin.events.OnDamage;
 import com.gmail.kukubaczek.SmartAdmin.events.OnPing;
+import com.gmail.kukubaczek.SmartAdmin.events.OnPlayerLogin;
 import com.gmail.kukubaczek.SmartAdmin.events.OnRightClick;
 import com.gmail.kukubaczek.SmartAdmin.events.OnRightClickPlayer;
 import com.gmail.kukubaczek.SmartAdmin.events.PlayerMenuOnInvClick;
 import com.gmail.kukubaczek.SmartAdmin.events.PlayersListOnInvClick;
 import com.gmail.kukubaczek.SmartAdmin.events.antycheat.OnInvOpen;
-import com.gmail.kukubaczek.SmartAdmin.events.JoinLeaveMsg;
+import com.gmail.kukubaczek.SmartAdmin.events.OnJoinLeave;
 
 
 public class Main extends JavaPlugin{
@@ -33,9 +34,7 @@ public class Main extends JavaPlugin{
   public static String tag_AC;
   public static String join_msg;
   public static String leave_msg;
-  public static int FakeSlots;
-  
-  public static String motd;
+  public static String max_players;
 
   public static boolean chat = true;
 
@@ -50,7 +49,7 @@ public class Main extends JavaPlugin{
   public void onEnable() {
     plugin = this;
     
-    registerEvents(this, new OnChat(), new OnPing(), new MainMenuOnInvClick(), new PlayersListOnInvClick(), new PlayerMenuOnInvClick(), new OnInvOpen(), new OnRightClick(), new OnRightClickPlayer(), new OnDamage(), new JoinLeaveMsg());
+    registerEvents(this, new OnChat(), new OnPing(), new MainMenuOnInvClick(), new PlayersListOnInvClick(), new PlayerMenuOnInvClick(), new OnInvOpen(), new OnRightClick(), new OnRightClickPlayer(), new OnDamage(), new OnJoinLeave(), new OnPlayerLogin());
     
     getCommand("SmartAdmin").setExecutor(new CmdSmartAdmin());
     getCommand("Kick").setExecutor(new CmdKick());
@@ -59,8 +58,6 @@ public class Main extends JavaPlugin{
     getCommand("EnderSee").setExecutor(new CmdEnderSee());
     getCommand("InvSee").setExecutor(new CmdInvSee());
     getCommand("ClearInv").setExecutor(new CmdClearInv());
-    
-    motd = Bukkit.getMotd();
     
     saveDefaultConfig();
     reloadCfg();
@@ -100,7 +97,7 @@ public class Main extends JavaPlugin{
     tag_AC = ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("TAG_ANTYCHEAT"));
     join_msg = ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("JOIN_MESSAGE"));
     leave_msg = ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("LEAVE_MESSAGE"));
-    FakeSlots = plugin.getConfig().getInt("FakeSlots");
+    max_players = plugin.getConfig().getString("MAX_PLAYERS");
   }
 
   public static String getTag(String tag){
