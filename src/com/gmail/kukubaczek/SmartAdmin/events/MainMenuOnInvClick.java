@@ -44,8 +44,10 @@ public class MainMenuOnInvClick implements Listener{
             MainMenuCreator.reloadInv(player);
 
           } else if(clicked.getDisplayName().equals("§bWyczyść chat")){
-            for (int i = 0; i < 100; i++){
-              Bukkit.broadcastMessage(" ");
+            for(Player p: Bukkit.getOnlinePlayers()){
+              for (int i = 0; i <= 99; i++){
+                p.sendMessage(" ");
+              }
             }
             Bukkit.broadcastMessage(Main.getTag("tag") + " §bChat został wyczyszczony!");
             Bukkit.broadcast(Main.getTag("tag") + " §a" + player.getName() + " §fwyczyścił chat!", "SmartAdmin.*");
