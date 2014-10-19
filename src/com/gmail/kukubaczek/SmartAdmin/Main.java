@@ -1,5 +1,8 @@
 package com.gmail.kukubaczek.SmartAdmin;
 
+import java.util.HashSet;
+import java.util.Set;
+
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.event.Listener;
@@ -39,6 +42,8 @@ public class Main extends JavaPlugin{
   public static String full_server_msg;
 
   public static boolean chat = true;
+  
+  public static Set<String> godmode = new HashSet<String>();
 
   /*
    * 

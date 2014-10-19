@@ -26,7 +26,7 @@ public class EnchantOnClick implements Listener {
         ItemStack cursor = event.getCursor();
         if(clicked == null) return;
         if(clicked.hasDisplayName()){
-          if(cursor.getType() != null){
+          if(cursor != null){
             if(event.getRawSlot() <= 53){
               event.setCancelled(true);
               //player.sendMessage("1");
@@ -35,7 +35,7 @@ public class EnchantOnClick implements Listener {
               if(clicked.getDisplayName().startsWith("§b")){
                 //player.sendMessage("4");
                 Enchantment ench = clicked.getEnchants().keySet().iterator().next();
-                if(event.getCursor() != null){
+                if(ench != null){
                   if(event.isShiftClick()){
                     event.setCursor(Enchant.clear(cursor, ench));
                     //player.sendMessage("0");

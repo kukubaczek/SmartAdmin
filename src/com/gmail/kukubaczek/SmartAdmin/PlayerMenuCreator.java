@@ -124,6 +124,19 @@ public class PlayerMenuCreator {
     stack.setItemMeta(meta);
     menu.setItem(43, stack);
 
+    stack = new ItemStack (Material.GOLDEN_APPLE, 1);
+    meta = stack.getItemMeta();
+    if(!Main.godmode.contains(gracz.getName())){
+      meta.setDisplayName("§eWłącz godmode");
+      meta.setLore(Arrays.asList("§7Gracz stanie się nieśmiertelny."));
+    } else {
+      meta.setDisplayName("§eWyłącz godmode");
+      meta.setLore(Arrays.asList("§7Gracz przestanie być nieśmiertelny."));
+      stack.setDurability((short) 1);
+    }
+    stack.setItemMeta(meta);
+    menu.setItem(12, stack);
+
     admin.openInventory(menu);
   }
 }

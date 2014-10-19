@@ -21,7 +21,7 @@ public class MainMenuCreator {
     ItemStack stack = new ItemStack(Material.INK_SACK, 1);
     ItemMeta Meta = stack.getItemMeta();
     short dur;
-    if(Main.getVar("chat") == true){
+    if(Main.getVar("chat")){
       dur = (short) 10;
       Meta.setDisplayName("§cWyłącz chat");
       Meta.setLore(Arrays.asList("§7Wyłącza chat.", "§7Aktualnie: §aWłączony!"));
