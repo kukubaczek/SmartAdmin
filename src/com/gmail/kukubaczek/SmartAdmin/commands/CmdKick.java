@@ -20,17 +20,17 @@ public class CmdKick implements CommandExecutor {
       sender.sendMessage(Main.getTag("error") + " §fPoprawne użycie§a: §f/§akick §f<§agracz§f> <§apowód§f>");
       return true;
 
-    }else if (args.length == 1){
+    } else if (args.length == 1){
       if(Bukkit.getPlayerExact(args[0]) != null){
         String admin = sender.getName();
         Bukkit.getPlayerExact(args[0]).kickPlayer("§aZostałeś wyrzucony z serwera!" + "\n§ePrzez: §f" + admin);
         Bukkit.broadcastMessage(Main.getTag("tag") + " §fGracz §a" + args[0] + "§f został wyrzucony z serwera przez §a" + sender.getName() + "§f!");
         return true;
-      }else{
+      } else {
         sender.sendMessage(Main.getTag("error") + " §fWybrany gracz jest §coffline§f!");
         return true;
       }
-    }else{
+    } else {
       if(Bukkit.getPlayerExact(args[0]) != null){
         String admin = sender.getName();
         String reasonMsg = "";
@@ -40,7 +40,7 @@ public class CmdKick implements CommandExecutor {
         Bukkit.getPlayerExact(args[0]).kickPlayer("§aZostałeś wyrzucony z serwera!" + "\n§ePrzez: §f" + admin + "\n§ePowód:\n§f" + reasonMsg);
         Bukkit.broadcastMessage(Main.getTag("tag") + " §fGracz §a" + args[0] + "§f został wyrzucony z serwera przez §a" + sender.getName() + "§f!");
         return true;
-      }else{
+      } else {
         sender.sendMessage(Main.getTag("error") + " §fWybrany gracz jest §coffline§f!");
         return true;
       }

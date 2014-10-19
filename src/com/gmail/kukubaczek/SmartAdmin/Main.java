@@ -10,6 +10,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 import com.gmail.kukubaczek.SmartAdmin.commands.CmdClearInv;
 import com.gmail.kukubaczek.SmartAdmin.commands.CmdEnderSee;
+import com.gmail.kukubaczek.SmartAdmin.commands.CmdGamemode;
 import com.gmail.kukubaczek.SmartAdmin.commands.CmdHelpOp;
 import com.gmail.kukubaczek.SmartAdmin.commands.CmdInvSee;
 import com.gmail.kukubaczek.SmartAdmin.commands.CmdKick;
@@ -51,7 +52,7 @@ public class Main extends JavaPlugin{
    * Obowiązuje zakaz używania kodu bez wiedzy i zgody autorów.
    * 
    */
-
+  
   @Override
   public void onEnable() {
     plugin = this;
@@ -65,6 +66,7 @@ public class Main extends JavaPlugin{
     getCommand("EnderSee").setExecutor(new CmdEnderSee());
     getCommand("InvSee").setExecutor(new CmdInvSee());
     getCommand("ClearInv").setExecutor(new CmdClearInv());
+    getCommand("Gamemode").setExecutor(new CmdGamemode());
 
     saveDefaultConfig();
     reloadCfg();

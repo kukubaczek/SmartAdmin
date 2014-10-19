@@ -22,6 +22,10 @@ commands:
   ClearInv:
     description: Czysci ekwipunek.
     aliases: [cinv, ci]
+  gamemode:
+    description: Zmienia tryb gry.
+    usage: /<command> [tryb gry] [gracz]
+    aliases: [gm]
     
 permissions:
   SmartAdmin.*:
