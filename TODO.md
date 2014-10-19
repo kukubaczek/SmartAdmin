@@ -1,41 +1,35 @@
 W planach do dodania:
 =====
-- feed // jest w heal //nie liczy sie
-- system banów
-  - tempban
-- dead msg
-- system motd
-  - ~~kolorowe motd z server.proporties~~
-  - losowe motd z configa
-- spawn mob
-- spawn (teleport)
-- set spawn
-- on first join message
-- hat
-- repair
-- enderOpen
-  - widok ender swojego dla vipów itp 
-- crafting open
-- enchant open
-- anvil open 
-- piorun (komenda)
-
-Zrobione:
-=====
-- ~~god~~
-- ~~diament otwierający menu~~
-- ~~clearinv~~
-- ~~inv see~~
-- ~~gamemode~~
-- ~~szybki dostep do zarzadzania soba w glownym menu~~
-- ~~kill~~
-- ~~zmiana slotów (nie fake sloty, one są prawdziwe ;3)~~
-  - ~~na nieskończoność~~
-  - ~~inną ilość~~
-  - ~~pozostawienie tej z server.proporties~~
-  - ~~zmiana wiadomości powiadamiającej o pełnym serwerze~~
-- ~~zmiana wiadomości dołączenia lub opuszczenia gry~~
-- system motd
-  - ~~kolorowe motd z server.proporties~~
-- enderOpen
-  - ~~widok ender jakiegoś gracza dla administracji~~
+- [ ] feed // jest w heal //nie liczy sie
+- [ ] system banów
+  - [ ] tempban
+- [ ] dead msg
+- [ ] system motd
+  - [x] kolorowe motd z server.proporties
+  - [ ] losowe motd z configa
+- [ ] spawn mob
+- [ ] spawn (teleport)
+- [ ] set spawn
+- [ ] on first join message
+- [ ] hat
+- [ ] repair
+- [ ] enderOpen
+  - [ ] widok ender swojego dla vipów itp 
+  - [x] widok ender jakiegoś gracza dla administracji
+- [ ] crafting open
+- [ ] enchant open
+- [ ] anvil open 
+- [ ] piorun (komenda)
+- [x] god
+- [x] diament otwierający menu
+- [x] clearinv
+- [x] inv see
+- [x] gamemode
+- [x] szybki dostep do zarzadzania soba w glownym menu
+- [x] kill
+- [x] zmiana slotów (nie fake sloty, one są prawdziwe ;3)
+  - [x] na nieskończoność
+  - [x] inną ilość
+  - [x] pozostawienie tej z server.proporties
+  - [x] zmiana wiadomości powiadamiającej o pełnym serwerze
+- [x] zmiana wiadomości dołączenia lub opuszczenia gry
