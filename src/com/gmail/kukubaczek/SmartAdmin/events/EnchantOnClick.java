@@ -47,7 +47,7 @@ public class EnchantOnClick implements Listener {
                   }else if(event.isRightClick()){
                     if(lvl == 1){
                       meta.removeEnchant(Enchantment.DIG_SPEED);
-                    }else{
+                    }else if(lvl > 0){
                       meta.addEnchant(Enchantment.DIG_SPEED, lvl - 1, true); 
                     }
                     cursor.setItemMeta(meta);
