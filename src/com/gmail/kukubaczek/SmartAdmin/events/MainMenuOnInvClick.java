@@ -9,6 +9,7 @@ import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.meta.ItemMeta;
 
+import com.gmail.kukubaczek.SmartAdmin.EnchantCreator;
 import com.gmail.kukubaczek.SmartAdmin.Main;
 import com.gmail.kukubaczek.SmartAdmin.MainMenuCreator;
 import com.gmail.kukubaczek.SmartAdmin.PlayerMenuCreator;
@@ -86,6 +87,8 @@ public class MainMenuOnInvClick implements Listener{
           } else if(clicked.getDisplayName().equals("§bZarządzaj sobą")){
             player.closeInventory();
             PlayerMenuCreator.openInv(player, player.getName());
+          } else if(clicked.getDisplayName().equals("§bEnchantuj")){
+              EnchantCreator.openInv(player);
           }
         }
 

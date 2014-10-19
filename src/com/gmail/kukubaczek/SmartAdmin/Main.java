@@ -12,6 +12,7 @@ import com.gmail.kukubaczek.SmartAdmin.commands.CmdInvSee;
 import com.gmail.kukubaczek.SmartAdmin.commands.CmdKick;
 import com.gmail.kukubaczek.SmartAdmin.commands.CmdKickAll;
 import com.gmail.kukubaczek.SmartAdmin.commands.CmdSmartAdmin;
+import com.gmail.kukubaczek.SmartAdmin.events.EnchantOnClick;
 import com.gmail.kukubaczek.SmartAdmin.events.OnChat;
 import com.gmail.kukubaczek.SmartAdmin.events.MainMenuOnInvClick;
 import com.gmail.kukubaczek.SmartAdmin.events.OnDamage;
@@ -50,7 +51,7 @@ public class Main extends JavaPlugin{
   public void onEnable() {
     plugin = this;
 
-    registerEvents(this, new OnChat(), new OnPing(), new MainMenuOnInvClick(), new PlayersListOnInvClick(), new PlayerMenuOnInvClick(), new OnInvOpen(), new OnRightClick(), new OnRightClickPlayer(), new OnDamage(), new OnJoinLeave(), new OnPlayerLogin());
+    registerEvents(this, new OnChat(), new OnPing(), new EnchantOnClick(), new MainMenuOnInvClick(), new PlayersListOnInvClick(), new PlayerMenuOnInvClick(), new OnInvOpen(), new OnRightClick(), new OnRightClickPlayer(), new OnDamage(), new OnJoinLeave(), new OnPlayerLogin());
 
     getCommand("SmartAdmin").setExecutor(new CmdSmartAdmin());
     getCommand("Kick").setExecutor(new CmdKick());

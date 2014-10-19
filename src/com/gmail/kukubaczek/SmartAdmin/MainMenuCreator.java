@@ -96,6 +96,13 @@ public class MainMenuCreator {
     skullMeta.setLore(Arrays.asList("§7Wyświetla menu zarządzania ", "§7graczem §a" + player.getName()));
     stack.setItemMeta(skullMeta);
     menu.setItem(21, stack);
+    
+    stack = new ItemStack(Material.ENCHANTED_BOOK, 1, (short) 3);
+    Meta = stack.getItemMeta();
+    Meta.setDisplayName("§bEnchantuj"); 
+    Meta.setLore(Arrays.asList("§7Enchantuj itemki."));
+    stack.setItemMeta(Meta);
+    menu.setItem(37, stack);
   }
 
   public static void openInv(Player player){
