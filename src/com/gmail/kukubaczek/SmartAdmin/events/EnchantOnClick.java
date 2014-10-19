@@ -9,6 +9,8 @@ import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
+import com.gmail.kukubaczek.SmartAdmin.functions.Enchant;
+
 
 public class EnchantOnClick implements Listener {
 
@@ -27,32 +29,22 @@ public class EnchantOnClick implements Listener {
           if(cursor.getType() != null){
             if(event.getRawSlot() <= 53){
               event.setCancelled(true);
-              player.sendMessage("1");
-              player.sendMessage("3");
-              if(clicked.getDisplayName().equals("§bEfficiency")){
-                player.sendMessage("4");
+              //player.sendMessage("1");
+              //player.sendMessage("3");
+              //String name = clicked.getDisplayName();
+              if(clicked.getDisplayName().startsWith("§b")){
+                //player.sendMessage("4");
+                Enchantment ench = clicked.getEnchants().keySet().iterator().next();
                 if(event.getCursor() != null){
-                  ItemMeta meta = cursor.getItemMeta();
-                  int lvl = cursor.getEnchantmentLevel(Enchantment.DIG_SPEED);
                   if(event.isShiftClick()){
-                    meta.removeEnchant(Enchantment.DIG_SPEED);
-                    cursor.setItemMeta(meta);
-                    event.setCursor(cursor);
-                    player.sendMessage("7");
-                  }else if(event.isLeftClick()){
-                    meta.addEnchant(Enchantment.DIG_SPEED, lvl + 1, true);
-                    cursor.setItemMeta(meta);
-                    event.setCursor(cursor);
-                    player.sendMessage("5");
-                  }else if(event.isRightClick()){
-                    if(lvl == 1){
-                      meta.removeEnchant(Enchantment.DIG_SPEED);
-                    }else if(lvl > 0){
-                      meta.addEnchant(Enchantment.DIG_SPEED, lvl - 1, true); 
-                    }
-                    cursor.setItemMeta(meta);
-                    event.setCursor(cursor);
-                    player.sendMessage("6");
+                    event.setCursor(Enchant.clear(cursor, ench));
+                    //player.sendMessage("0");
+                  } else if(event.isLeftClick()){
+                    event.setCursor(Enchant.add(cursor, ench, 1));
+                    //player.sendMessage("+");
+                  } else if(event.isRightClick()){
+                    event.setCursor(Enchant.subtract(cursor, ench, 1));
+                    //player.sendMessage("-");
                   }
                 }
               }
