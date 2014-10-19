@@ -1,33 +1,41 @@
 W planach do dodania:
-==========
-- god
-- tempban
+=====
+- feed // jest w heal //nie liczy sie
+- system banów
+  - tempban
 - dead msg
-- kolorowe motd
+- system motd
+  - ~~kolorowe motd z server.proporties~~
+  - losowe motd z configa
 - spawn mob
 - spawn (teleport)
 - set spawn
 - on first join message
-- ~~gamemode~~
 - hat
 - repair
-- ~~enderOpen komenda~~
+- enderOpen
   - widok ender swojego dla vipów itp 
-- crafting dla gracza
-- enchant open dla gracza
-- anvil pen dla gracza
-- piorun jakaś komenda
-- usunięcie migania menu przy w(y)łączaniu fly //nie udało mi się - kuku
+- crafting open
+- enchant open
+- anvil open 
+- piorun (komenda)
 
 Zrobione:
 =====
-
-- ~~różdżka otwierające menu gracza~~
-- ~~enderOpen komenda~~
-  - ~~widok ender jakiegoś gracza dla administracji~~
+- ~~god~~
+- ~~diament otwierający menu~~
 - ~~clearinv~~
 - ~~inv see~~
 - ~~gamemode~~
 - ~~szybki dostep do zarzadzania soba w glownym menu~~
 - ~~kill~~
-- ~~feed // jest w heal~~
+- ~~zmiana slotów (nie fake sloty, one są prawdziwe ;3)~~
+  - ~~na nieskończoność~~
+  - ~~inną ilość~~
+  - ~~pozostawienie tej z server.proporties~~
+  - ~~zmiana wiadomości powiadamiającej o pełnym serwerze~~
+- ~~zmiana wiadomości dołączenia lub opuszczenia gry~~
+- system motd
+  - ~~kolorowe motd z server.proporties~~
+- enderOpen
+  - ~~widok ender jakiegoś gracza dla administracji~~
