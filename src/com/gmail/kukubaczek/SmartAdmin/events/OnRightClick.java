@@ -16,10 +16,8 @@ public class OnRightClick implements Listener{
       if(event.getItem() != null && player.hasPermission("smartadmin.open")){
         if(event.getItem().hasItemMeta() && event.getItem().getItemMeta().hasDisplayName() && event.getItem().getItemMeta().getDisplayName().equals("§bSmartAdmin")){
           MainMenuCreator.openInv(player);
-        } else {
-          player.getInventory().remove(event.getItem());
         }
-      }
+      } else player.getInventory().remove(event.getItem());
     }
   }
 }
