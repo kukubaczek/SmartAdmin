@@ -33,4 +33,6 @@ W planach do dodania:
   - [x] pozostawienie tej z server.proporties
   - [x] zmiana wiadomości powiadamiającej o pełnym serwerze
 - [x] zmiana wiadomości dołączenia lub opuszczenia gry
+- [x] system enchantowania
+  - [ ] dodanie wszystkich enchantow do menu (kuku.. do roboty :X)
 - [ ] mozliwosc zmiany tekstu komunikatów (lang.yml)
