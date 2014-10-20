@@ -12,27 +12,27 @@ Tag, przy wiadomościach wysyłanych przez AntyCheat
 
 ```JOIN_MESSAGE: "&a{player} &7joined the game"```
 
-Wiadomość przy wejściu gracza na serwer, gdy wpiszemy "false" wiadomość zostanie usunięta!
+Wiadomość przy wejściu gracza na serwer, gdy wpiszemy ```false``` wiadomość zostanie usunięta!
 
 Zmienne:
-- {player} - wyświetla nick gracza.
+- ```{player}``` - wyświetla nick gracza.
 
 ```LEAVE_MESSAGE: "&a{player} &7left the game"```
 
-Wiadomość przy wyjściu gracza z serwera, gdy wpiszemy "false" wiadomość zostanie usunięta!
+Wiadomość przy wyjściu gracza z serwera, gdy wpiszemy ```false``` wiadomość zostanie usunięta!
 
 Zmienne:
-- {player} - wyświetla nick gracza.
+- ```{player}``` - wyświetla nick gracza.
 
 ```FULL_SERVER_MESSAGE: "&cThe server is full!"```
 
-Wiadomość wyświetlana, gdy serwer jest pełny, przez to gracz nie może na niego wejść
+Wiadomość wyświetlana przy próbie wejścia gracza na serwer, gdy serwer jest pełny
 
 ```MAX_PLAYERS: true```
 
-Ustawia liczbę slotów
+Ustawia liczbę slotów. **Uwaga, funkcja ta omija limity hostingów :D**
 
 Wartośći:
-- "true" - liczba slotów jest pobierana z server.properties (nie jest poprostu zmieniana),
-- "false" - ustawia liczbę slotów na nieskończoność (wyświetlany jest zawsze jeden slot więcej, niż ilość graczy),
-- liczba - ustawia tą liczbę jako liczbę slotów.
+- ```true``` - liczba slotów jest pobierana z server.properties (nie jest poprostu zmieniana),
+- ```false``` - ustawia liczbę slotów na nieskończoność (wyświetlany jest zawsze jeden slot więcej, niż ilość graczy),
+- liczba (np. ```50```) - ustawia tą liczbę jako liczbę slotów.
