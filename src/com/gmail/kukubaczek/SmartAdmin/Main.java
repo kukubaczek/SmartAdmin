@@ -15,6 +15,7 @@ import com.gmail.kukubaczek.SmartAdmin.commands.CmdHelpOp;
 import com.gmail.kukubaczek.SmartAdmin.commands.CmdInvSee;
 import com.gmail.kukubaczek.SmartAdmin.commands.CmdKick;
 import com.gmail.kukubaczek.SmartAdmin.commands.CmdKickAll;
+import com.gmail.kukubaczek.SmartAdmin.commands.CmdOpen;
 import com.gmail.kukubaczek.SmartAdmin.commands.CmdSmartAdmin;
 import com.gmail.kukubaczek.SmartAdmin.events.EnchantOnClick;
 import com.gmail.kukubaczek.SmartAdmin.events.OnChat;
@@ -67,6 +68,8 @@ public class Main extends JavaPlugin{
     getCommand("InvSee").setExecutor(new CmdInvSee());
     getCommand("ClearInv").setExecutor(new CmdClearInv());
     getCommand("Gamemode").setExecutor(new CmdGamemode());
+    getCommand("enchanttable").setExecutor(new CmdOpen());
+    getCommand("workbench").setExecutor(new CmdOpen());
 
     saveDefaultConfig();
     reloadCfg();

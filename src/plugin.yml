@@ -26,6 +26,14 @@ commands:
     description: Zmienia tryb gry.
     usage: /<command> [tryb gry] [gracz]
     aliases: [gm]
+  workbench:
+    description: Otwiera crafting table.
+    usage: /<command>
+    aliases: [wb]
+  enchanttable:
+    description: Otwiera enchanting table.
+    usage: /<command>
+    aliases: [et]
     
 permissions:
   SmartAdmin.*:
