@@ -17,8 +17,14 @@ public class CmdGamemode implements CommandExecutor{
   private static final Map<String, GameMode> gamemodes = new HashMap<String, GameMode>(){
     private static final long serialVersionUID = -1932765058040624335L;{
     put("0", GameMode.SURVIVAL);
+    put("s", GameMode.SURVIVAL);
+    put("survival", GameMode.SURVIVAL);
     put("1", GameMode.CREATIVE);
+    put("c", GameMode.CREATIVE);
+    put("creative", GameMode.CREATIVE);
     put("2", GameMode.ADVENTURE);
+    put("a", GameMode.ADVENTURE);
+    put("adventure", GameMode.ADVENTURE);
   }};
   
   @SuppressWarnings("deprecation")
