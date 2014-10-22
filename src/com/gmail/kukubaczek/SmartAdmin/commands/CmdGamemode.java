@@ -38,8 +38,8 @@ public class CmdGamemode implements CommandExecutor{
         p.setGameMode(gm);
         return true;
       case 1:
-        if(gamemodes.containsKey(args[0])){
-          gm = gamemodes.get(args[0]);
+        if(gamemodes.containsKey(args[0].toLowerCase())){
+          gm = gamemodes.get(args[0].toLowerCase());
           Bukkit.broadcast(Main.getTag("tag") + " §a" + p.getName() + " §fwłączył sobie tryb gry §a" + gm.toString() + "§f!", "SmartAdmin.*");
           p.setGameMode(gm);
         } else {
@@ -47,8 +47,8 @@ public class CmdGamemode implements CommandExecutor{
         }
         return true;
       case 2:
-        if(gamemodes.containsKey(args[0])){
-          gm = gamemodes.get(args[0]);
+        if(gamemodes.containsKey(args[0].toLowerCase())){
+          gm = gamemodes.get(args[0].toLowerCase());
           Player gracz = Bukkit.getPlayerExact(args[1]);
           if(gracz != null){
             Bukkit.broadcast(Main.getTag("tag") + " §a" + p.getName() + " §fwłączył graczowi §a" + args[1] + "§f tryb gry §a" + gm.toString() + "§f!", "SmartAdmin.*");

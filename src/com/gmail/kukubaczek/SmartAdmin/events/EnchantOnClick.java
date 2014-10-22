@@ -30,7 +30,7 @@ public class EnchantOnClick implements Listener {
         if(clicked.hasDisplayName()){
           if(event.getRawSlot() <= 53){
             event.setCancelled(true);
-            if(clicked.getDisplayName().startsWith("§b")){
+            if(clicked.getDisplayName().startsWith("§a")){
               if(cursor != null && !cursor.getType().equals(Material.AIR)){
                 Enchantment ench = clicked.getEnchants().keySet().iterator().next();
                 if(ench != null){
