@@ -10,7 +10,9 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 import com.gmail.kukubaczek.SmartAdmin.commands.CmdClearInv;
 import com.gmail.kukubaczek.SmartAdmin.commands.CmdEnderSee;
+import com.gmail.kukubaczek.SmartAdmin.commands.CmdFeed;
 import com.gmail.kukubaczek.SmartAdmin.commands.CmdGamemode;
+import com.gmail.kukubaczek.SmartAdmin.commands.CmdHeal;
 import com.gmail.kukubaczek.SmartAdmin.commands.CmdHelpOp;
 import com.gmail.kukubaczek.SmartAdmin.commands.CmdInvSee;
 import com.gmail.kukubaczek.SmartAdmin.commands.CmdKick;
@@ -70,7 +72,8 @@ public class Main extends JavaPlugin{
     getCommand("Gamemode").setExecutor(new CmdGamemode());
     getCommand("enchanttable").setExecutor(new CmdOpen());
     getCommand("workbench").setExecutor(new CmdOpen());
-
+    getCommand("heal").setExecutor(new CmdHeal());
+    getCommand("feed").setExecutor(new CmdFeed());
     saveDefaultConfig();
     reloadCfg();
 

@@ -1,5 +1,5 @@
 name: SmartAdmin
-version: 0.1
+version: 0.3
 main: com.gmail.kukubaczek.SmartAdmin.Main
 description: "Wprowadza na Twój serwer autorskie Toolsy! Wystarczy wpisać /smartadmin open!"
 authors: [Kukubaczek, JuniorJPDJ]
@@ -19,6 +19,10 @@ commands:
     description: Pokazuje enderchest gracza.
   invsee:
     description: Pokazuje ekwipunek gracza.
+  feed:
+    description: Karmi gracza.
+  heal:
+    description: Leczy gracza.
   ClearInv:
     description: Czysci ekwipunek.
     aliases: [cinv, ci]
