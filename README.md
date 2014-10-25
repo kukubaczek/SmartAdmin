@@ -10,3 +10,8 @@ Plugin jest tworzony przez Kukubaczka i Juniora (oraz okazyjnie przez społeczno
 - Autorzy: Kukubaczek i JuniorJPDJ
 - TODO: https://github.com/kukubaczek/SmartAdmin/blob/master/TODO.md
 - Download: https://github.com/kukubaczek/SmartAdmin/releases/download/v0.1-beta2/SmartAdmin.jar
+
+Wikipedia pluginu
+===
+
+Wszystkie Tutoriale dot. pluginu można znaleść na tej stronie: https://github.com/kukubaczek/SmartAdmin/wiki
