@@ -14,7 +14,12 @@ public class ClearInv {
 	    		
 		    	admin.sendMessage(Main.getTag("tag") + " §fWyczyściłeś ekwipunek gracza §a" + enderplayer + "§f!");
 	
-		    	gracz.getInventory().clear();
+		      gracz.getInventory().clear();
+		      gracz.getInventory().setHelmet(null);
+		      gracz.getInventory().setChestplate(null);
+		      gracz.getInventory().setLeggings(null);
+		      gracz.getInventory().setBoots(null);
+		      gracz.getInventory().setHeldItemSlot(0);
 		    	
 	    	}else{
 	    		admin.sendMessage(Main.getTag("error") + " §fWybrany gracz jest offline!");
