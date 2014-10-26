@@ -42,7 +42,7 @@ public class Main extends JavaPlugin{
   public static String tag_AC;
   public static String join_msg;
   public static String leave_msg;
-  public static String max_players;
+  public static int max_players; //to było dziwne...
   public static String full_server_msg;
 
   public static boolean chat = true;
@@ -113,7 +113,7 @@ public class Main extends JavaPlugin{
     join_msg = ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("JOIN_MESSAGE"));
     leave_msg = ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("LEAVE_MESSAGE"));
     full_server_msg = ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("FULL_SERVER_MESSAGE"));
-    max_players = plugin.getConfig().getString("MAX_PLAYERS");
+    max_players = plugin.getConfig().getInt("MAX_PLAYERS");
   }
 
   public static String getTag(String tag){
