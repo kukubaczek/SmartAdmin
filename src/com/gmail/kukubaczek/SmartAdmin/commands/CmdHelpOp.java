@@ -20,7 +20,10 @@ public class CmdHelpOp implements CommandExecutor {
 
       String msg = "";
       for(int i = 0; i < args.length; i++){
-        msg += args[i] + " ";
+        msg = " " + msg + args[i];
+      }
+      if (msg.startsWith(" ") {
+        msg = msg.replaceFirst(" ", "");
       }
 
       Bukkit.broadcast("§4[§cHelpOp§4] §7" + sender.getName() + "§b » §f" + msg, "SmartAdmin.*");
