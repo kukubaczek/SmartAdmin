@@ -4,6 +4,7 @@ import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
+import org.apache.commons.lang.StringUtils;
 
 import com.gmail.kukubaczek.SmartAdmin.Main;
 
@@ -18,10 +19,7 @@ public class CmdHelpOp implements CommandExecutor {
       sender.sendMessage(Main.getTag("error") + " §fWpisz wiadomość! §a/§fhelpop §a<§fwiadomosc§a>§f!");
     }else{
 
-      String msg = "";
-      for(int i = 0; i < args.length; i++){
-        msg += args[i] + " ";
-      }
+      String msg = StringUtils.join(args, " ");
 
       Bukkit.broadcast("§4[§cHelpOp§4] §7" + sender.getName() + "§b » §f" + msg, "SmartAdmin.*");
       sender.sendMessage("§4[§cHelpOp§4] §f" + msg);
