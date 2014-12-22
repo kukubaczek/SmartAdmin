@@ -14,4 +14,4 @@ Plugin jest tworzony przez Kukubaczka i Juniora (oraz okazyjnie przez społeczno
 Wikipedia pluginu
 ===
 
-Wszystkie Tutoriale dot. pluginu można znaleść na tej stronie: https://github.com/kukubaczek/SmartAdmin/wiki
+Wszystkie poradniki dot. pluginu można znaleźć na tej stronie: https://github.com/kukubaczek/SmartAdmin/wiki
